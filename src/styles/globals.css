@@ -9,6 +9,10 @@
     font-family: Poppins, sans-serif;
     @apply font-sans;
   }
+  html {
+    -webkit-tap-highlight-color: transparent;
+    @apply scroll-smooth;
+  }
 }
 
 a {

@@ -37,7 +37,7 @@ export default function Navbar() {
                     Projects
                 </Button>
                 
-                <button onClick={() => toggleTheme()} className="text-primary dark:text-light text-3xl">
+                <button onClick={() => toggleTheme()} className="text-primary dark:text-light text-3xl focus:outline-none">
                     {
                         darkMode ? (
                             <FiMoon />

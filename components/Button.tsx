@@ -7,6 +7,6 @@ export default function Button({ className, target, children }: { className: str
     }
 
     return (
-        <button onClick={handleBtnClick} className={"cursor-pointer transition-colors duration-300 " + className} >{ children }</button>
+        <button onClick={handleBtnClick} className={"cursor-pointer transition-colors duration-300 focus:outline-none " + className} >{ children }</button>
     )
 }
