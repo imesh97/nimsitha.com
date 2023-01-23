@@ -18,10 +18,7 @@ export default function Navbar() {
     return (
         <nav className="transition duration-300 flex flex-col md:flex-row items-center md:justify-around py-4 md:py-6 bg-light dark:bg-jet md:shadow-sm w-full absolute md:fixed top-0 left-0 right-0 z-10">
             <div className="flex items-center mb-4 md:mb-0">
-                <Link href="" className="cursor-pointer">
-                    <h3 className="inline-flex items-center text-3xl font-semibold text-primary dark:text-light tracking-wider">&#123; imesh &#125;</h3>
-                </Link>
-
+                <Button target="top" className="inline-flex items-center text-3xl font-semibold text-primary dark:text-light tracking-wider">&#123; imesh &#125;</Button>
             </div>
 
             <div className="flex items-center space-x-6 text-primary dark:text-light tracking-wider">
@@ -32,8 +29,8 @@ export default function Navbar() {
                 <button onClick={() => toggleTheme()} className="text-primary dark:text-light text-3xl focus:outline-none">
                     {
                         darkMode ? (
-                            <FiSun />
-                        ) : <FiMoon />
+                            <FiMoon />
+                        ) : <FiSun />
                     }
                 </button>
             </div>

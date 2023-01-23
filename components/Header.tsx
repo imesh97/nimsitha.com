@@ -1,13 +1,15 @@
 import Link from "next/link"
 import { FaRegFilePdf } from "react-icons/fa"
-import { HiCode, HiArrowNarrowDown } from "react-icons/hi"
+import { HiCode, HiArrowNarrowDown, HiOutlineHome } from "react-icons/hi"
 import SocialLinks from "./SocialLinks"
 import Button from "./Button"
+import { BsDisplay, BsJournalCode, BsTerminal } from "react-icons/bs"
+import { GoDeviceDesktop } from "react-icons/go"
 
 export default function Header() {
 	return (
 		<div className="grid grid-rows-1 md:grid-cols-3 gap-4 h-screen items-center justify-items-center">
-			<div className="row-span-1 md:col-span-2 text-center md:text-justify px-8">
+			<div className="row-span-1 md:col-span-2 text-center md:text-justify pt-16 px-8">
 				<h1 className="text-6xl text-primary dark:text-light mb-1 font-semibold tracking-wider">imesh nimsitha</h1>
 				<div className="flex justify-center md:justify-between items-center my-4">
 					<span className="h-px w-1/4 md:w-1/5 bg-primary dark:bg-light"></span>
@@ -22,12 +24,12 @@ export default function Header() {
 					</Link>
 					
 				</div>
-				<div className="flex items-center justify-center md:justify-start mt-12 md:mt-10 transition animate-pulse hover:animate-none">
-					<Button target="intro" className="inline-flex bg-transparent text-primary dark:text-light2 hover:text-primary dark:hover:text-light items-center tracking-wider"><HiArrowNarrowDown className="text-2xl mr-2"/>Scroll for more</Button>
+				<div className="flex items-center justify-center md:justify-start mt-16 md:mt-20 transition animate-pulse hover:animate-none">
+					<Button target="intro" className="inline-flex bg-transparent text-primary dark:text-light2 hover:text-primary dark:hover:text-light items-center tracking-wider duration-500"><HiArrowNarrowDown className="text-2xl mr-2"/>Scroll for more</Button>
 				</div>
 			</div>
-			<div className="row-span-1 md:col-span-1 hidden md:block justify-self-start">
-				<HiCode className="text-9xl text-primary dark:text-light"/>
+			<div className="pl-4 sm:px-0 row-span-1 md:col-span-1 hidden md:block justify-self-start">
+				<BsDisplay className="text-[200px] lg:text-[300px] text-primary dark:text-light"/>
 			</div>
 			
 		</div>

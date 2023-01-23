@@ -4,8 +4,8 @@ import Button from "./Button"
 
 export default function Footer() {
     return (
-        <div className="px-16">
-            <h3 className="text-center text-4xl font-semibold text-primary dark:text-light tracking-wider pt-10 pb-8">&#123; imesh &#125;</h3>
+        <div className="px-16 text-center">
+            <Button target="top" className="text-4xl font-semibold text-primary dark:text-light tracking-wider pt-10 pb-8">&#123; imesh &#125;</Button>
             <ul className="flex justify-center text-center items-center gap-x-6 mb-6 text-xl tracking-wider">
                 <li><Button target="intro" className="text-primary dark:text-light hover:text-black dark:hover:text-light2">Intro</Button></li>
                 <li><Button target="skills" className="text-primary dark:text-light hover:text-black dark:hover:text-light2">Skills</Button></li>
