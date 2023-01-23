@@ -19,23 +19,15 @@ export default function Navbar() {
         <nav className="transition duration-300 flex flex-col md:flex-row items-center md:justify-around py-4 md:py-6 bg-light dark:bg-jet md:shadow-sm w-full absolute md:fixed top-0 left-0 right-0 z-10">
             <div className="flex items-center mb-4 md:mb-0">
                 <Link href="" className="cursor-pointer">
-                    <h3 className="inline-flex items-center text-3xl font-semibold text-primary dark:text-light tracking-wider">
-                        &#123; imesh &#125;
-                    </h3>
+                    <h3 className="inline-flex items-center text-3xl font-semibold text-primary dark:text-light tracking-wider">&#123; imesh &#125;</h3>
                 </Link>
 
             </div>
 
             <div className="flex items-center space-x-6 text-primary dark:text-light tracking-wider">
-                <Button target="intro" className="flex text-primary dark:text-light hover:text-black hover:dark:text-light2">
-                    Intro
-                </Button>
-                <Button target="skills" className="flex text-primary dark:text-light hover:text-black hover:dark:text-light2">
-                    Skills
-                </Button>
-                <Button target="projects" className="flex text-primary dark:text-light hover:text-black hover:dark:text-light2">
-                    Projects
-                </Button>
+                <Button target="intro" className="flex text-primary dark:text-light hover:text-black hover:dark:text-light2">Intro</Button>
+                <Button target="skills" className="flex text-primary dark:text-light hover:text-black hover:dark:text-light2">Skills</Button>
+                <Button target="projects" className="flex text-primary dark:text-light hover:text-black hover:dark:text-light2">Projects</Button>
                 
                 <button onClick={() => toggleTheme()} className="text-primary dark:text-light text-3xl focus:outline-none">
                     {
