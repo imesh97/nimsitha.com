@@ -32,8 +32,8 @@ export default function Navbar() {
                 <button onClick={() => toggleTheme()} className="text-primary dark:text-light text-3xl focus:outline-none">
                     {
                         darkMode ? (
-                            <FiMoon />
-                        ) : <FiSun />
+                            <FiSun />
+                        ) : <FiMoon />
                     }
                 </button>
             </div>
