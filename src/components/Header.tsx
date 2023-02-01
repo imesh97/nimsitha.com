@@ -1,10 +1,9 @@
 import Link from "next/link"
 import { FaRegFilePdf } from "react-icons/fa"
-import { HiCode, HiArrowNarrowDown, HiOutlineHome } from "react-icons/hi"
+import { HiArrowNarrowDown } from "react-icons/hi"
 import SocialLinks from "./SocialLinks"
 import Button from "./Button"
-import { BsDisplay, BsJournalCode, BsTerminal } from "react-icons/bs"
-import { GoDeviceDesktop } from "react-icons/go"
+import { BsDisplay } from "react-icons/bs"
 
 export default function Header() {
 	return (
@@ -20,18 +19,18 @@ export default function Header() {
 				<div className="flex justify-center md:justify-start items-center space-x-6">
 					<SocialLinks iconSize="6xl" />
 					<Link href="" target="_blank">
-						<div className="hidden inline-flex bg-black dark:bg-light hover:bg-primary dark:hover:bg-light2 text-light dark:text-primary text-lg rounded-3xl font-medium px-6 py-6 items-center transition-colors duration-300" ><FaRegFilePdf className="text-2xl mr-2"/>Resume</div>
+						<div className="hidden inline-flex bg-black dark:bg-light hover:bg-primary dark:hover:bg-light2 text-light dark:text-primary text-lg rounded-3xl font-medium px-6 py-6 items-center transition-colors duration-300" ><FaRegFilePdf className="text-2xl mr-2" />Resume</div>
 					</Link>
-					
+
 				</div>
 				<div className="flex items-center justify-center md:justify-start mt-16 md:mt-20 transition animate-pulse hover:animate-none">
-					<Button target="intro" className="inline-flex bg-transparent text-primary dark:text-light2 hover:text-primary dark:hover:text-light items-center tracking-wider duration-500"><HiArrowNarrowDown className="text-2xl mr-2"/>Scroll for more</Button>
+					<Button target="intro" className="inline-flex bg-transparent text-primary dark:text-light2 hover:text-primary dark:hover:text-light items-center tracking-wider duration-500"><HiArrowNarrowDown className="text-2xl mr-2" />Scroll for more</Button>
 				</div>
 			</div>
 			<div className="pl-4 sm:px-0 row-span-1 md:col-span-1 hidden md:block justify-self-start">
-				<BsDisplay className="text-[200px] lg:text-[300px] text-primary dark:text-light"/>
+				<BsDisplay className="text-[200px] lg:text-[300px] text-primary dark:text-light" />
 			</div>
-			
+
 		</div>
 	)
 }

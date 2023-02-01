@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Navbar from "components/Navbar"
-import Header from "components/Header"
-import IntroSection from "components/IntroSection"
-import SkillsSection from "components/SkillsSection"
-import ProjectsSection from "components/ProjectsSection"
-import Footer from "components/Footer"
+import Navbar from "@/components/Navbar"
+import Header from "@/components/Header"
+import IntroSection from "@/components/IntroSection"
+import SkillsSection from "@/components/SkillsSection"
+import ProjectsSection from "@/components/ProjectsSection"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
@@ -27,8 +27,8 @@ export default function Home() {
         <div id="projects">
           <ProjectsSection />
         </div>
-			  <Footer />
-		</div>
+        <Footer />
+      </div>
     </>
   )
 }

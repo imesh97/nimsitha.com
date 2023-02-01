@@ -5,9 +5,9 @@ export default function IntroSection() {
     return (
         <div className="grid grid-cols-2 pt-2 pb-28 md:pb-32 px-8 sm:mx-auto sm:w-3/4 justify-items-center justify-self-center">
             <div className="col-span-2 text-center">
-				<div className="flex justify-center items-center text-5xl text-primary dark:text-light mb-4 font-semibold tracking-wider"><BiUserPin className="mx-3" />Intro</div>
-				<h3 className="text-normal md:text-xl text-secondary dark:text-light2 font-normal mb-10 tracking-wider">Who am I? Get to know me...</h3>
-			</div>
+                <div className="flex justify-center items-center text-5xl text-primary dark:text-light mb-4 font-semibold tracking-wider"><BiUserPin className="mx-3" />Intro</div>
+                <h3 className="text-normal md:text-xl text-secondary dark:text-light2 font-normal mb-10 tracking-wider">Who am I? Get to know me...</h3>
+            </div>
             <div className="col-span-2 sm:col-span-1">
                 <Image src="https://via.placeholder.com/300/fff.png" className="rounded-full" height="300" width="300" alt="Profile Picture" />
             </div>

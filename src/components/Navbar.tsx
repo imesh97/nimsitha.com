@@ -1,10 +1,9 @@
-import Link from "next/link"
 import Button from "./Button"
 import { useState } from "react"
 import { FiSun, FiMoon } from "react-icons/fi"
 
 export default function Navbar() {
-    const [ darkMode, setDarkMode ] = useState(false)
+    const [darkMode, setDarkMode] = useState(false)
 
     const toggleTheme = () => {
         if (darkMode) {
@@ -25,7 +24,7 @@ export default function Navbar() {
                 <Button target="intro" className="flex text-primary dark:text-light hover:text-black hover:dark:text-light2">Intro</Button>
                 <Button target="skills" className="flex text-primary dark:text-light hover:text-black hover:dark:text-light2">Skills</Button>
                 <Button target="projects" className="flex text-primary dark:text-light hover:text-black hover:dark:text-light2">Projects</Button>
-                
+
                 <button onClick={() => toggleTheme()} className="text-primary dark:text-light text-3xl focus:outline-none">
                     {
                         darkMode ? (

@@ -63,7 +63,7 @@ export const ProjectsData = [
         ],
         links: [
             {
-                href: "https://www.spigotmc.org/resources/authors/imdafatboss.77824/",
+                href: "https://www.spigotmc.org/resources/authors/imesh97.77824/",
                 label: "Posts",
                 icon: <RiPagesLine />
             },

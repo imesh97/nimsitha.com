@@ -8,7 +8,7 @@ export const SocialsData = [
     },
     {
         icon: <FaLinkedin />,
-        href: "https://www.linkedin.com/in/imesh-nimsitha-19863b1a9/"
+        href: "https://www.linkedin.com/in/imesh-nimsitha/"
     },
     {
         icon: <BsFileEarmarkPdfFill />,
