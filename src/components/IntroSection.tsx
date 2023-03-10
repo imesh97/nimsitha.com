@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BiUserPin } from "react-icons/bi";
 
 export default function IntroSection() {
@@ -9,7 +8,7 @@ export default function IntroSection() {
                 <h3 className="text-normal md:text-xl text-secondary dark:text-light2 font-normal mb-10 tracking-wider">Who am I? Get to know me...</h3>
             </div>
             <div className="col-span-2 sm:col-span-1">
-                <Image src="https://via.placeholder.com/300/fff.png" className="rounded-full" height="300" width="300" alt="Profile Picture" />
+                <img src='/profile.png' className="rounded-full" height="300" width="300" alt="Profile Picture" />
             </div>
             <div className="col-span-2 sm:col-span-1 pt-8 md:pt-12">
                 <p className="text-center md:text-start text-secondary dark:text-light2 text-lg tracking-wider">Hi, my name is Imesh Nimsitha. I am a Computer Science student at the University of Western Ontario. I began programming as a hobby because it allows me to freely design and create something of my own. Now, I aspire to become a successful software developer in the future. Currently, I am looking for internships in order to develop my career by gaining valuable experience in the field.</p>
