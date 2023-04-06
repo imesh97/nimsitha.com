@@ -1,6 +1,6 @@
 import { GiTap } from "react-icons/gi"
-import { MdOutlineSmartDisplay } from "react-icons/md"
-import { SiCurseforge, SiGit, SiGithub, SiJava, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript, SiFirebase, SiPhp, SiMysql, SiHtml5, SiCss3, SiApache, SiGooglemaps } from "react-icons/si"
+import { MdGames, MdOutlineSmartDisplay } from "react-icons/md"
+import { SiCurseforge, SiGit, SiGithub, SiJava, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript, SiFirebase, SiPhp, SiMysql, SiHtml5, SiCss3, SiApache, SiGooglemaps, SiCplusplus, SiC } from "react-icons/si"
 import { RiPagesLine } from "react-icons/ri"
 import { TbApi } from "react-icons/tb"
 import { GrMysql } from "react-icons/gr"
@@ -47,6 +47,32 @@ export const ProjectsData = [
         ]
     },
     {
+        title: "Ultra Super Space Rocks",
+        description: "A top-down view single player shooter game inspired by the classic Atari game, Asteroids. Built as a group project for my Object-Oriented Design and Analysis class.",
+        dateLabel: "from Jan. 2023 to April 2023",
+        stack: [
+            {
+                label: "C++",
+                icon: <SiCplusplus />
+            },
+            {
+                label: "C",
+                icon: <SiC />
+            },
+            {
+                label: "Raylib",
+                icon: <MdGames />
+            }
+        ],
+        links: [
+            {
+                href: "https://github.com/imesh97/ultra-super-space-rocks",
+                label: "Code",
+                icon: <SiGithub />
+            }
+        ]
+    },
+    {
         title: "Study Tasks",
         description: "A responsive full stack web app for efficiently managing personal academic tasks. I built this because I genuinely needed a solution to organizing my university coursework deadlines.",
         dateLabel: "from November 2022 to now",
@@ -74,7 +100,7 @@ export const ProjectsData = [
         ],
         links: [
             {
-                href: "studytasks.nimsitha.com",
+                href: "https://studytasks.nimsitha.com",
                 label: "Live",
                 icon: <MdOutlineSmartDisplay />
             },
@@ -121,7 +147,7 @@ export const ProjectsData = [
     },
     {
         title: "Crypto Trading System",
-        description: "A trading strategy management system for tracking and analyzing real-time cryptocurrency prices. I collaborated in a team of 4 to build this during my Intro to Software Engineering course.",
+        description: "A trading strategy management system for tracking and analyzing real-time cryptocurrency prices. I collaborated in a team of 4 to build this during Intro to Software Engineering.",
         dateLabel: "from Jan. 2022 to April 2022",
         stack: [
             {
