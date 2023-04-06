@@ -1,6 +1,6 @@
 import { GiTap } from "react-icons/gi"
-import { MdGames, MdOutlineSmartDisplay } from "react-icons/md"
-import { SiCurseforge, SiGit, SiGithub, SiJava, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript, SiFirebase, SiPhp, SiMysql, SiHtml5, SiCss3, SiApache, SiGooglemaps, SiCplusplus, SiC } from "react-icons/si"
+import { MdGames, MdOutlineSmartDisplay, MdSend } from "react-icons/md"
+import { SiCurseforge, SiGit, SiGithub, SiJava, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript, SiFirebase, SiPhp, SiMysql, SiHtml5, SiCss3, SiApache, SiGooglemaps, SiCplusplus, SiC, SiChakraui, SiWordpress, SiAdobephotoshop } from "react-icons/si"
 import { RiPagesLine } from "react-icons/ri"
 import { TbApi } from "react-icons/tb"
 import { GrMysql } from "react-icons/gr"
@@ -168,6 +168,62 @@ export const ProjectsData = [
                 href: "https://github.com/imesh97/crypto-trading-system",
                 label: "Code",
                 icon: <SiGithub />
+            }
+        ]
+    },
+    {
+        title: "Comfort Sleep Innovations",
+        description: "A lead capture page for collecting newsletter subscriptions and attracting new customers. Created as a web developer for ANVIROS Ventures Inc.",
+        dateLabel: "from Aug. 2021 to Jan. 2022",
+        stack: [
+            {
+                label: "TypeScript",
+                icon: <SiTypescript />
+            },
+            {
+                label: "Next.js",
+                icon: <SiNextdotjs />
+            },
+            {
+                label: "React.js",
+                icon: <SiReact />
+            },
+            {
+                label: "Chakra UI",
+                icon: <SiChakraui />
+            },
+            {
+                label: "SendGrid API",
+                icon: <MdSend />
+            }
+        ],
+        links: [
+            {
+                href: "https://comfortsleepinnovations.com",
+                label: "Live",
+                icon: <MdOutlineSmartDisplay />
+            }
+        ]
+    },
+    {
+        title: "ANVIROS Creations",
+        description: "A commercial website used as a hub for promoting Amazon products. Created as a web developer for ANVIROS Ventures Inc.",
+        dateLabel: "from Jan. 2021 to Jan. 2022",
+        stack: [
+            {
+                label: "WordPress",
+                icon: <SiWordpress />
+            },
+            {
+                label: "Adobe Photoshop",
+                icon: <SiAdobephotoshop />
+            },
+        ],
+        links: [
+            {
+                href: "https://anviroscreations.com",
+                label: "Live",
+                icon: <MdOutlineSmartDisplay />
             }
         ]
     },
