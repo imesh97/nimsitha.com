@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
+import CodeLayout from "@/components/Layout/CodeLayout";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontFamily = Fira_Code({
+  variable: "--font-main",
   subsets: ["latin"],
 });
 
@@ -24,10 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${fontFamily.variable} antialiased`}>
+        <CodeLayout>{children}</CodeLayout>
       </body>
     </html>
   );
