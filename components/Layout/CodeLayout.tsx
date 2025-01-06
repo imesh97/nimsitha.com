@@ -1,6 +1,9 @@
 import React from "react";
-import Sidebar from "@/components/Sidebar";
-import ActivityBar from "@/components/ActivityBar";
+import Sidebar from "@/components/Layout/Sidebar";
+import ActivityBar from "@/components/Layout/ActivityBar";
+import StatusBar from "@/components/Layout/StatusBar";
+import { Editor } from "@/components/Layout/Editor";
+import { fontCode } from "@/app/layout";
 
 export default function CodeLayout({
   children,
@@ -8,15 +11,16 @@ export default function CodeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-screen flex flex-col bg-[rgb(30,30,30)] text-white">
-      {/* VS Code-like top bar */}
-      <div className="h-12 bg-[#323233] flex items-center px-4 border-b border-[#424242]">
+    <div
+      className={`h-screen flex flex-col bg-grey-d text-white ${fontCode.variable}`}
+    >
+      <div className="h-10 bg-[#323233] flex items-center px-4 border-b border-[#424242]">
         <div className="flex space-x-2">
           <div className="w-3 h-3 rounded-full bg-[#ff5f57]"></div>
           <div className="w-3 h-3 rounded-full bg-[#febc2e]"></div>
           <div className="w-3 h-3 rounded-full bg-[#28c840]"></div>
         </div>
-        <div className="mx-auto text-sm text-gray-400">
+        <div className="mx-auto text-sm text-gray-300">
           Portfolio - Imesh Nimsitha
         </div>
       </div>
@@ -24,11 +28,8 @@ export default function CodeLayout({
       <div className="flex flex-1 overflow-hidden">
         <ActivityBar />
         <Sidebar />
-
-        {/* Main Content Area */}
-        <div className="flex-1 bg-[#1e1e1e] overflow-auto">
-          <div className="p-6">{children}</div>
-        </div>
+        <Editor>{children}</Editor>
+        <StatusBar />
       </div>
     </div>
   );
