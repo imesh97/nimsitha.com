@@ -3,11 +3,50 @@
 @tailwind utilities;
 
 body {
-  font-family: Fira Code, Helvetica, sans-serif;
+  font-family: Consolas, Helvetica, sans-serif;
+}
+
+.page {
+  font-family: "Plus Jakarta Sans";
+}
+
+.page p {
+  font-family: "Afacad Flux";
 }
 
 @layer base {
   :root {
     --radius: 0.5rem;
   }
+}
+
+:root {
+  --scrollbar-primary: #1e1e1e;
+  --scrollbar-secondary: #6b7280;
+  --scrollbar-tertiary: #323233;
+}
+
+/* CUSTOM SCROLLBAR */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-secondary) var(--scrollbar-primary);
+}
+
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-secondary);
+  border-radius: 14px;
+  border: 3px solid var(--scrollbar-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-tertiary);
 }
