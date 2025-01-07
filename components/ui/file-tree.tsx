@@ -14,7 +14,6 @@ import React, {
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
-import { useEditorStore } from "@/store/editorStore";
 
 type TreeViewElement = {
   id: string;
@@ -80,10 +79,8 @@ const Tree = forwardRef<HTMLDivElement, TreeViewProps>(
     const [expandedItems, setExpandedItems] = useState<string[] | undefined>(
       initialExpandedItems
     );
-    const { openTabs } = useEditorStore();
 
     const selectItem = useCallback((id: string) => {
-      openTabs.push(id);
       setSelectedId(id);
     }, []);
 
