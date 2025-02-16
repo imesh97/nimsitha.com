@@ -10,8 +10,8 @@ export default function Sidebar() {
   return (
     <div
       className={`${
-        sidebarOpen ? "block" : "hidden"
-      } w-[90%] md:w-52 lg:w-64 2xl:w-72 bg-grey border-r border-[#424242] overflow-y-auto`}
+        sidebarOpen ? "flex flex-col" : "hidden"
+      } w-full md:w-52 lg:w-64 2xl:w-72 bg-grey border-r border-[#424242] overflow-y-auto`}
     >
       <div className="py-3 px-4">
         <div className="text-sm text-gray-400 uppercase tracking-wide mb-2">

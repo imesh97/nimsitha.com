@@ -17,6 +17,7 @@ export function FileTree() {
         break;
       case "skills.json":
         router.push("/skills");
+        break;
       case "projects/overview.tsx":
         router.push("/projects");
         break;
@@ -29,25 +30,19 @@ export function FileTree() {
     <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-none bg-transparent">
       <Tree
         className="overflow-hidden rounded-md text-gray-200"
-        initialSelectedId="2"
+        initialSelectedId="home.tsx"
         initialExpandedItems={[
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
+          "src",
+          "home.tsx",
+          "skills.json",
+          "projects",
+          "projects/overview.tsx",
         ]}
         elements={NAVIGATION}
         openIcon={<FolderOpenIcon className="size-4 text-gray-400" />}
         closeIcon={<FolderIcon className="size-4 text-gray-400" />}
       >
-        <Folder element="src" value="1">
+        <Folder element="src" value="src">
           <File
             value="home.tsx"
             fileIcon={<FileIcon filename="home.tsx" className="w-4 h-4" />}
@@ -60,7 +55,7 @@ export function FileTree() {
           >
             <p onClick={() => handleSelect("skills.json")}>skills.json</p>
           </File>
-          <Folder value="4" element="projects">
+          <Folder value="projects" element="projects">
             <File
               value="projects/overview.tsx"
               fileIcon={
@@ -73,9 +68,6 @@ export function FileTree() {
               <p onClick={() => handleSelect("projects/overview.tsx")}>
                 overview.tsx
               </p>
-            </File>
-            <File value="6">
-              <p>page.tsx</p>
             </File>
           </Folder>
         </Folder>

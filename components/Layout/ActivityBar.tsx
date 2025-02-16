@@ -22,7 +22,7 @@ export default function ActivityBar() {
   }, [isMobile]);
 
   return (
-    <div className="w-12 bg-grey-l flex flex-col items-center py-4 space-y-6">
+    <div className="w-12 bg-grey-l flex flex-col flex-none items-center py-4 space-y-6">
       <Files
         className="w-6 h-6 text-gray-100 cursor-pointer transition-colors hover:text-blue-500"
         onClick={sidebarOpen ? closeSidebar : openSidebar}
