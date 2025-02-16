@@ -1,8 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { GitBranch, Wifi, Bell } from "lucide-react";
 
 export default function StatusBar() {
-  const year = new Date().getFullYear();
+  const [year, setYear] = useState<number>(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
 
   return (
     <div className="flex h-[22px] bg-[#007ACC] text-gray-100 text-xs fixed bottom-0 left-0 right-0 z-50 items-center justify-between px-2 border-t border-[#007ACC]/50">
