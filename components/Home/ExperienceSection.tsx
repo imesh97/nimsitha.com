@@ -76,7 +76,7 @@ export function ExperienceSection() {
                         <img
                           src={exp.logo}
                           alt={`${exp.company} - Logo`}
-                          className="w-16 h-16 object-contain opacity-100 cursor-pointer hover:opacity-80 transition-opacity"
+                          className="w-16 h-16 object-contain opacity-100 cursor-pointer filter grayscale-0 hover:grayscale transition-all duration-300"
                         />
                       </Link>
 
@@ -84,7 +84,7 @@ export function ExperienceSection() {
                         <h3 className="text-xl font-semibold text-gray-200 mb-1">
                           {exp.position}
                         </h3>
-                        <h4 className="text-base font-semibold tracking-wide text-blue-400 underline underline-offset-8">
+                        <h4 className="text-base font-semibold tracking-wide text-blue-400 hover:text-gray-400 transition-colors duration-300 underline underline-offset-8">
                           <Link href={exp.site} target="_blank">
                             {exp.company}
                           </Link>

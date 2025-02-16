@@ -8,17 +8,17 @@ const values = [
     description: "A pixel-perfect approach to everything I do.",
   },
   {
-    icon: <Coffee className="w-6 h-6 text-blue-400" />,
+    icon: <Coffee className="w-6 h-6 text-green-500" />,
     title: "problem solver",
     description: "Turning complex problems into elegant solutions.",
   },
   {
-    icon: <Heart className="w-6 h-6 text-blue-400" />,
+    icon: <Heart className="w-6 h-6 text-yellow-400" />,
     title: "user-focused",
     description: "Creating intuitive experiences for everyone.",
   },
   {
-    icon: <Zap className="w-6 h-6 text-blue-400" />,
+    icon: <Zap className="w-6 h-6 text-red-500" />,
     title: "fast learner",
     description: "Adapting to new tech and best practices.",
   },
