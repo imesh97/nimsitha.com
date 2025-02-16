@@ -10,16 +10,16 @@ export default function ActivityBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 960);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [setIsMobile]);
 
   useEffect(() => {
     if (isMobile) closeSidebar();
-  }, [isMobile]);
+  }, [isMobile, setIsMobile]);
 
   return (
     <div className="w-12 bg-grey-l flex flex-col flex-none items-center py-4 space-y-6">
