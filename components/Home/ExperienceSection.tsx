@@ -57,13 +57,13 @@ export function ExperienceSection() {
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="space-y-0 w-full lg:w-[66%] 3xl:w-[70%]">
+          <div className="space-y-0 w-full xl:max-w-[66%]">
             {EXPERIENCES.map((exp, index) => (
               <div
                 key={index}
-                className="relative pl-8 pb-4 border-l-2 border-[#404040] last:pb-0"
+                className="relative sm:pl-8 pb-4 sm:border-l-2 border-[#404040] last:pb-0"
               >
-                <div className="absolute -left-[9px] top-0 w-4 h-4 bg-blue-400 rounded-full border-4 border-[#1E1E1E]" />
+                <div className="hidden sm:block absolute -left-[9px] top-0 w-4 h-4 bg-blue-400 rounded-full border-4 border-[#1E1E1E]" />
 
                 <div className="bg-grey rounded-lg p-6 pb-2 border border-grey-l hover:border-blue-400 transition-colors">
                   <div className="flex flex-col md:flex-row justify-between items-start mb-0">
@@ -84,7 +84,7 @@ export function ExperienceSection() {
                         <h3 className="text-xl font-semibold text-gray-200 mb-1">
                           {exp.position}
                         </h3>
-                        <h4 className="text-base font-semibold tracking-wide text-blue-400 hover:text-gray-400 transition-colors duration-300 underline underline-offset-8">
+                        <h4 className="text-base font-semibold tracking-wide text-blue-400 underline underline-offset-8">
                           <Link href={exp.site} target="_blank">
                             {exp.company}
                           </Link>
