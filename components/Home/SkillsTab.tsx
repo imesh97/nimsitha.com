@@ -5,27 +5,27 @@ export default function SkillsTab({ skills }: { skills: Skill[] }) {
   const categories = Array.from(new Set(skills.map((skill) => skill.category)));
 
   return (
-    <Tabs defaultValue={categories[0]} className="pb-8">
-      <TabsList className="mb-4 w-full">
+    <Tabs defaultValue={categories[0]} className="bg-grey-d pb-8 rounded-lg">
+      <TabsList className="mb-4 w-full bg-grey-d rounded-none">
         {categories.map((category) => (
           <TabsTrigger
             key={`trigger-${category}`}
             value={category}
-            className="text-base w-full bg-grey underline underline-offset-4"
+            className="text-base w-full bg-grey-d underline underline-offset-4"
           >
             {category}
           </TabsTrigger>
         ))}
       </TabsList>
       {categories.map((category) => (
-        <TabsContent key={`tab-${category}`} value={category} className="">
-          <div className="flex gap-4 flex-wrap px-4">
+        <TabsContent key={`tab-${category}`} value={category}>
+          <div className="flex gap-x-4 gap-y-0 flex-wrap px-4">
             {skills
               .filter((skill) => skill.category === category)
               .map((skill, index) => (
                 <div
                   key={index}
-                  className="text-xl font-semibold p-3 text-gray-100 inline-flex items-center gap-2"
+                  className="text-xl font-content font-semibold p-3 text-gray-200 inline-flex items-center gap-2 filter grayscale-0 hover:grayscale cursor-pointer transition-all duration-300"
                 >
                   {(skill.icon || skill.img) && (
                     <img
@@ -37,7 +37,6 @@ export default function SkillsTab({ skills }: { skills: Skill[] }) {
                       alt={skill.name}
                       width="32"
                       height="32"
-                      className="filter grayscale-0 hover:grayscale cursor-pointer transition-all duration-300"
                     />
                   )}
                   {skill.name}
