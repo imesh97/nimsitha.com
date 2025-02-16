@@ -55,7 +55,7 @@ export const NETWORKING_LINKS = [
   },
   {
     name: "Resume",
-    href: "/resume.pdf",
+    href: "/assets/resume.pdf",
     tooltip: "Resume",
   },
 ];
