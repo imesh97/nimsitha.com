@@ -175,13 +175,198 @@ export const EXPERIENCES: Experience[] = [
   },
 ];
 
+export interface Skill {
+  name: string;
+  category: string;
+  icon?: string;
+  img?: string;
+}
+
 export const SKILLS = [
-  { name: "React", category: "Frontend" },
-  { name: "TypeScript", category: "Frontend" },
-  { name: "Node.js", category: "Backend" },
-  { name: "Python", category: "Backend" },
-  { name: "AWS", category: "DevOps" },
-  { name: "Docker", category: "DevOps" },
-  { name: "GraphQL", category: "Backend" },
-  { name: "UI/UX Design", category: "Design" },
+  {
+    name: "HTML",
+    category: "Frontend",
+    icon: "html5",
+  },
+  {
+    name: "CSS",
+    category: "Frontend",
+    icon: "css3",
+  },
+  {
+    name: "React",
+    category: "Frontend",
+    icon: "react",
+  },
+  {
+    name: "Bootstrap",
+    category: "Frontend",
+    icon: "bootstrap",
+  },
+  {
+    name: "Tailwind",
+    category: "Frontend",
+    icon: "tailwindcss",
+  },
+  {
+    name: "Python",
+    category: "Backend",
+    icon: "python",
+  },
+  {
+    name: "Java",
+    category: "Backend",
+    icon: "java",
+  },
+  {
+    name: "C",
+    category: "Backend",
+    icon: "c",
+  },
+  {
+    name: "C++",
+    category: "Backend",
+    icon: "cplusplus",
+  },
+  {
+    name: "JavaScript",
+    category: "Backend",
+    icon: "javascript",
+  },
+  {
+    name: "Node.js",
+    category: "Backend",
+    icon: "nodedotjs",
+  },
+  {
+    name: "PHP",
+    category: "Backend",
+    icon: "php",
+  },
+  {
+    name: "MySQL",
+    category: "Backend",
+    icon: "mysql",
+  },
+  {
+    name: "Docker",
+    category: "DevOps",
+    icon: "docker",
+  },
+  {
+    name: "AWS",
+    category: "DevOps",
+    icon: "amazonwebservices",
+  },
+  {
+    name: "Git",
+    category: "Programs/Tools",
+    icon: "git",
+  },
+  {
+    name: "GitHub",
+    category: "Programs/Tools",
+    icon: "github",
+  },
+  {
+    name: "Visual Studio Code",
+    category: "Programs/Tools",
+    icon: "visualstudiocode",
+  },
+  {
+    name: "Eclipse",
+    category: "Programs/Tools",
+    icon: "eclipseide",
+  },
+  {
+    name: "IntelliJ IDEA",
+    category: "Programs/Tools",
+    icon: "intellijidea",
+  },
+  {
+    name: "PyCharm",
+    category: "Programs/Tools",
+    icon: "pycharm",
+  },
+  {
+    name: "Linux",
+    category: "Programs/Tools",
+    icon: "linux",
+  },
+  {
+    name: "Firebase",
+    category: "Programs/Tools",
+    icon: "firebase",
+  },
+  {
+    name: "cPanel",
+    category: "Programs/Tools",
+  },
+  {
+    name: "UML",
+    category: "Programs/Tools",
+  },
+  {
+    name: "WordPress",
+    category: "Programs/Tools",
+    icon: "wordpress",
+  },
+  {
+    name: "Microsoft Office",
+    category: "Extra",
+    icon: "microsoftoffice",
+  },
+  {
+    name: "Adobe Photoshop",
+    category: "Extra",
+  },
+  {
+    name: "Adobe Premiere Pro",
+    category: "Extra",
+  },
+  {
+    name: "Leadership",
+    category: "Extra",
+  },
+  {
+    name: "Problem Solving",
+    category: "Extra",
+  },
+  {
+    name: "Communication",
+    category: "Extra",
+  },
+];
+
+export const SLUGS = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "firebase",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "cypress",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
+  "figma",
 ];
