@@ -8,7 +8,7 @@ export function SkillsSection() {
     <div className="mt-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="relative flex gap-6">
-          <div className="w-[66%] xl:w-full justify-center">
+          <div className="w-full lg:w-[66%] justify-center">
             <h2 className="text-3xl font-bold mb-12 text-gray-200 tracking-wide">
               what&apos;s my skillset?
             </h2>
