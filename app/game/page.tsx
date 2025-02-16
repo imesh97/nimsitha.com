@@ -1,5 +1,8 @@
-import GameDynamic from "@/components/Game/GameDynamic";
-
 export default function GamePage() {
-  return <GameDynamic />;
+  //return <GameDynamic />;
+  return (
+    <div>
+      <p>Still working on this...</p>
+    </div>
+  );
 }
