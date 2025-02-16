@@ -9,12 +9,14 @@ import { fontContent } from "@/app/layout";
 
 export function HomePage() {
   return (
-    <div className={`min-h-screen bg-grey-d ${fontContent.variable} page`}>
+    <div
+      className={`min-h-screen bg-grey-d ${fontContent.variable} page container mx-auto`}
+    >
       <HeroSection />
       <AboutSection />
-      <ProjectsSection />
       <ExperienceSection />
       <SkillsSection />
+      <ProjectsSection />
       <ContactSection />
     </div>
   );
