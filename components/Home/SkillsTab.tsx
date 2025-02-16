@@ -1,5 +1,6 @@
 import { Skill } from "@/constants";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import Image from "next/image";
 
 export default function SkillsTab({ skills }: { skills: Skill[] }) {
   const categories = Array.from(new Set(skills.map((skill) => skill.category)));
@@ -27,18 +28,12 @@ export default function SkillsTab({ skills }: { skills: Skill[] }) {
                   key={index}
                   className="text-xl font-content font-semibold p-3 text-gray-200 inline-flex items-center gap-2 filter grayscale-0 hover:grayscale cursor-pointer transition-all duration-300"
                 >
-                  {(skill.icon || skill.img) && (
-                    <img
-                      src={
-                        skill.icon
-                          ? `https://cdn.simpleicons.org/${skill.icon}/${skill.icon}`
-                          : skill.img
-                      }
-                      alt={skill.name}
-                      width="32"
-                      height="32"
-                    />
-                  )}
+                  <Image
+                    src={skill.img}
+                    alt={skill.name}
+                    width="32"
+                    height="32"
+                  />
                   {skill.name}
                 </div>
               ))}

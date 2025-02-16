@@ -135,13 +135,13 @@ export const EXPERIENCES: Experience[] = [
   {
     company: "Affinity Solutions",
     position: "Software Developer",
-    period: "Dec. 2024 - Present",
+    period: "Dec. 2024 — Present",
     location: "Remote",
     achievements: [
-      "Led development of AI-powered CRM prototype for automotive dealerships, focusing on lead management and sales pipeline automation",
-      "Built responsive Next.js landing page to showcase platform features, resulting in 50% increase in user engagement",
-      "Collaborated with key stakeholder to define technical requirements and architecture for specialized automotive CRM solution",
-      "Implemented core prototype features including lead scoring algorithms and customer journey mapping",
+      "Led development of AI-powered CRM prototype for automotive dealerships, focusing on lead management and sales pipeline automation.",
+      "Built responsive Next.js landing page to showcase platform features, resulting in 50% increase in user engagement.",
+      "Collaborated with key stakeholder to define technical requirements and architecture for specialized automotive CRM solution.",
+      "Implemented core prototype features including lead scoring algorithms and customer journey mapping.",
     ],
     logo: "/assets/logo_affinity.svg",
     site: "https://affinity.nimsitha.com",
@@ -149,12 +149,12 @@ export const EXPERIENCES: Experience[] = [
   {
     company: "SymptomStream",
     position: "Chief Technology Officer",
-    period: "July 2024 - Present",
+    period: "July 2024 — Present",
     location: "Hamilton, CA",
     achievements: [
-      "Led development of AI-powered software for optimizing hospital triage processes to enhance ER decision-making and operational efficiency",
-      "Collaborated with 10+ stakeholders to gather technical requirements, refine architecture, and ensure alignment with business objectives",
-      "Directed project toward prototype phase by defining technical milestones and ensuring timely delivery of development goals",
+      "Led development of AI-powered software for optimizing hospital triage processes to enhance ER decision-making and operational efficiency.",
+      "Collaborated with 10+ stakeholders to gather technical requirements, refine architecture, and ensure alignment with business objectives.",
+      "Directed project toward prototype phase by defining technical milestones and ensuring timely delivery of development goals.",
     ],
     logo: "/assets/logo_symptomstream.png",
     site: "https://symptomstream.ca",
@@ -162,13 +162,13 @@ export const EXPERIENCES: Experience[] = [
   {
     company: "ANVIROS Ventures Inc.",
     position: "Web Developer",
-    period: "Jan. 2022 - Jan. 2023",
+    period: "Jan. 2022 — Jan. 2023",
     location: "Brampton, CA",
     achievements: [
-      "Built a commercial website for promoting Amazon products using WordPress, resulting in 200,000+ page hits",
-      "Developed a lead capture page for collecting newsletter subscriptions using TypeScript, Next.js and Chakra UI",
-      "Implemented API routes and serverless functions for subscription form emails, generating 25+ customer conversions",
-      "Administered and configured a cPanel server which hosts over 10 sites, improving overall disk usage by 70%",
+      "Built a commercial website for promoting Amazon products using WordPress, resulting in 200,000+ page hits.",
+      "Developed a lead capture page for collecting newsletter subscriptions using TypeScript, Next.js and Chakra UI.",
+      "Implemented API routes and serverless functions for subscription form emails, generating 25+ customer conversions.",
+      "Administered and configured a cPanel server which hosts over 10 sites, improving overall disk usage by 70%.",
     ],
     logo: "/assets/logo_anviros.png",
     site: "http://anviroscreations.com",
@@ -178,11 +178,15 @@ export const EXPERIENCES: Experience[] = [
 export interface Skill {
   name: string;
   category: string;
-  icon?: string;
-  img?: string;
+  img: string;
 }
 
 export const SKILLS = [
+  {
+    name: "Python",
+    category: "Backend",
+    img: "https://img.icons8.com/fluency/144/python.png",
+  },
   {
     name: "HTML",
     category: "Frontend",
@@ -196,7 +200,7 @@ export const SKILLS = [
   {
     name: "React",
     category: "Frontend",
-    icon: "react",
+    img: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
   },
   {
     name: "Next.js",
@@ -224,14 +228,14 @@ export const SKILLS = [
     img: "https://img.icons8.com/fluency/144/tailwind_css.png",
   },
   {
-    name: "Motion",
+    name: "Chakra UI",
     category: "Frontend",
-    img: "https://user-images.githubusercontent.com/7850794/164965523-3eced4c4-6020-467e-acde-f11b7900ad62.png",
+    img: "https://img.icons8.com/color/48/chakra-ui.png",
   },
   {
-    name: "Python",
-    category: "Backend",
-    img: "https://img.icons8.com/fluency/144/python.png",
+    name: "Motion",
+    category: "Frontend",
+    img: "/assets/icons/motion.png",
   },
   {
     name: "Java",
@@ -266,7 +270,7 @@ export const SKILLS = [
   {
     name: "PHP",
     category: "Backend",
-    img: "https://img.icons8.com/external-those-icons-flat-those-icons/24/external-PHP-programming-and-development-those-icons-flat-those-icons.png",
+    img: "https://img.icons8.com/nolan/64/php-logo.png",
   },
   {
     name: "MySQL",
@@ -279,19 +283,34 @@ export const SKILLS = [
     img: "https://img.icons8.com/color/48/mongo-db.png",
   },
   {
+    name: "PostgreSQL",
+    category: "Backend",
+    img: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-postgre-sql-a-free-and-open-source-relational-database-management-system-logo-shadow-tal-revivo.png",
+  },
+  {
+    name: "Firebase",
+    category: "Backend",
+    img: "https://img.icons8.com/color/48/firebase.png",
+  },
+  {
+    name: "Supabase",
+    category: "Backend",
+    img: "https://img.icons8.com/fluency/144/supabase.png",
+  },
+  {
     name: "Redis",
     category: "Backend",
     img: "https://img.icons8.com/fluency/144/redis.png",
   },
   {
-    name: "gRPC",
-    category: "Backend",
-    img: "https://grpc.io/img/logos/grpc-icon-color.png",
+    name: "Docker",
+    category: "DevOps",
+    img: "https://img.icons8.com/fluency/144/docker.png",
   },
   {
     name: "Git",
     category: "DevOps",
-    icon: "git",
+    img: "https://img.icons8.com/color/48/git.png",
   },
   {
     name: "GitHub",
@@ -309,9 +328,9 @@ export const SKILLS = [
     img: "https://img.icons8.com/nolan/64/amazon-web-services.png",
   },
   {
-    name: "Docker",
+    name: "Vercel",
     category: "DevOps",
-    img: "https://img.icons8.com/fluency/144/docker.png",
+    img: "/assets/icons/vercel.png",
   },
   {
     name: "Jira",
@@ -320,38 +339,63 @@ export const SKILLS = [
   },
   {
     name: "Visual Studio Code",
-    category: "Programs/Tools",
+    category: "Programs / Tools",
     img: "https://img.icons8.com/color/48/visual-studio-code-2019.png",
   },
   {
     name: "Eclipse",
-    category: "Programs/Tools",
+    category: "Programs / Tools",
     img: "https://img.icons8.com/office/40/java-eclipse.png",
   },
   {
     name: "IntelliJ IDEA",
-    category: "Programs/Tools",
+    category: "Programs / Tools",
     img: "https://img.icons8.com/color/48/intellij-idea.png",
   },
   {
     name: "Linux",
-    category: "Programs/Tools",
+    category: "Programs / Tools",
     img: "https://img.icons8.com/color/48/linux--v1.png",
   },
   {
-    name: "Firebase",
-    category: "Programs/Tools",
-    img: "https://img.icons8.com/color/48/firebase.png",
+    name: "gRPC",
+    category: "Backend",
+    img: "/assets/icons/grpc.png",
   },
   {
-    name: "UML",
-    category: "Programs/Tools",
-    img: "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/external-flow-interface-kiranshastry-lineal-color-kiranshastry.png",
+    name: "Stripe",
+    category: "Backend",
+    img: "https://img.icons8.com/fluency/144/stripe.png",
   },
   {
     name: "WordPress",
-    category: "Programs/Tools",
+    category: "Programs / Tools",
     img: "https://img.icons8.com/fluency/144/wordpress.png",
+  },
+  {
+    name: "Confluence",
+    category: "Programs / Tools",
+    img: "https://img.icons8.com/fluency/144/confluence.png",
+  },
+  {
+    name: "Slack",
+    category: "Programs / Tools",
+    img: "https://img.icons8.com/color/48/slack.png",
+  },
+  {
+    name: "Trello",
+    category: "Programs / Tools",
+    img: "https://img.icons8.com/color/48/trello.png",
+  },
+  {
+    name: "Figma",
+    category: "Programs / Tools",
+    img: "https://img.icons8.com/fluency/144/figma.png",
+  },
+  {
+    name: "UML",
+    category: "Programs / Tools",
+    img: "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/external-flow-interface-kiranshastry-lineal-color-kiranshastry.png",
   },
   {
     name: "Microsoft Office",
@@ -382,6 +426,11 @@ export const SKILLS = [
     name: "Communication",
     category: "Extra",
     img: "https://img.icons8.com/color/48/chat--v1.png",
+  },
+  {
+    name: "Agile / Scrum",
+    category: "Extra",
+    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-scrum-ux-and-ui-flaticons-flat-flat-icons.png",
   },
 ];
 
