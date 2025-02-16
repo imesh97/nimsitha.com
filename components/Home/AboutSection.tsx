@@ -13,12 +13,12 @@ const values = [
     description: "Turning complex problems into elegant solutions.",
   },
   {
-    icon: <Heart className="w-6 h-6 text-yellow-400" />,
+    icon: <Heart className="w-6 h-6 text-red-500" />,
     title: "user-focused",
     description: "Creating intuitive experiences for everyone.",
   },
   {
-    icon: <Zap className="w-6 h-6 text-red-500" />,
+    icon: <Zap className="w-6 h-6 text-yellow-500" />,
     title: "fast learner",
     description: "Adapting to new tech and best practices.",
   },
