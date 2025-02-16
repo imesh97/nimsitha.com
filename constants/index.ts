@@ -149,3 +149,14 @@ export const EXPERIENCES: Experience[] = [
     ],
   },
 ];
+
+export const SKILLS = [
+  { name: "React", category: "Frontend" },
+  { name: "TypeScript", category: "Frontend" },
+  { name: "Node.js", category: "Backend" },
+  { name: "Python", category: "Backend" },
+  { name: "AWS", category: "DevOps" },
+  { name: "Docker", category: "DevOps" },
+  { name: "GraphQL", category: "Backend" },
+  { name: "UI/UX Design", category: "Design" },
+];
