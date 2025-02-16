@@ -2,7 +2,7 @@ import { AnimatedSpan, Terminal, TypingAnimation } from "../magicui/terminal";
 
 export function ExperienceTerminal() {
   return (
-    <Terminal className="bg-transparent border-[#404040] border-2 min-h-full text-gray-200">
+    <Terminal className="bg-grey-d border-[#404040] border-2 min-h-full text-gray-200">
       <TypingAnimation className="text-xs">&gt; ./work_summary</TypingAnimation>
 
       <AnimatedSpan delay={1500} className="text-xs text-green-500">

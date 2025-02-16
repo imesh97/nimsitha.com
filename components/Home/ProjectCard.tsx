@@ -23,7 +23,7 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="relative overflow-hidden">
-      <div className="grid-col-1 group bg-[#2D2D2D] rounded-lg overflow-hidden border border-[#404040] hover:border-blue-400 transition-all h-full flex flex-col">
+      <div className="grid-col-1 group bg-grey rounded-lg overflow-hidden border border-grey-l hover:border-blue-400 transition-all h-full flex flex-col">
         <div className="aspect-video overflow-hidden">
           <img
             src={image}
@@ -43,7 +43,7 @@ export function ProjectCard({
               {technologies.map((tech, index) => (
                 <Badge
                   variant="default"
-                  className="text-xs transition-colors bg-grey text-gray-400 hover:bg-blue-600 hover:text-gray-200"
+                  className="text-xs font-base transition-colors bg-grey-l text-gray-300 hover:bg-blue-600 hover:text-gray-200"
                   key={index}
                 >
                   {tech}

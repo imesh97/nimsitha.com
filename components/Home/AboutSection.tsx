@@ -50,7 +50,7 @@ export function AboutSection() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="transition-colors p-4 bg-[#2D2D2D] rounded-lg border border-[#404040] hover:border-blue-400"
+                className="transition-colors p-4 bg-grey rounded-lg border border-grey-l hover:border-blue-400"
               >
                 <div className="mb-3">{value.icon}</div>
                 <h3 className="font-semibold text-gray-200 mb-1">
