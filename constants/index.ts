@@ -64,7 +64,7 @@ export const PROJECTS = [
   {
     title: "bankrpc - distributed banking",
     description:
-      "A distributed banking web app with data consistency and concurrent transactions.",
+      "A distributed banking web app with data persistence and concurrent transactions.",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c",
     technologies: ["Python", "Streamlit", "gRPC", "Redis", "AWS EC2", "Docker"],
     demoUrl: "http://ec2-3-144-116-12.us-east-2.compute.amazonaws.com:8501/",
@@ -111,7 +111,7 @@ export const PROJECTS = [
     githubUrl: "https://github.com/imesh97/raphael-ai",
   },
   {
-    title: "kylian - ai soccer analysis",
+    title: "kylian - ml soccer analysis",
     description:
       "A soccer analysis system for tracking and predicting player movement.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
@@ -171,7 +171,7 @@ export const EXPERIENCES: Experience[] = [
       "Administered and configured a cPanel server which hosts over 10 sites, improving overall disk usage by 70%",
     ],
     logo: "/assets/logo_anviros.png",
-    site: "https://anviroscreations.com",
+    site: "http://anviroscreations.com",
   },
 ];
 
@@ -186,12 +186,12 @@ export const SKILLS = [
   {
     name: "HTML",
     category: "Frontend",
-    icon: "html5",
+    img: "https://img.icons8.com/fluency/144/html-5.png",
   },
   {
     name: "CSS",
     category: "Frontend",
-    icon: "css3",
+    img: "https://img.icons8.com/fluency/144/css3.png",
   },
   {
     name: "React",
@@ -199,142 +199,189 @@ export const SKILLS = [
     icon: "react",
   },
   {
+    name: "Next.js",
+    category: "Frontend",
+    img: "https://img.icons8.com/nolan/64/nextjs.png",
+  },
+  {
+    name: "Vite",
+    category: "Frontend",
+    img: "https://img.icons8.com/fluency/144/vite.png",
+  },
+  {
+    name: "Streamlit",
+    category: "Frontend",
+    img: "https://img.icons8.com/color/48/streamlit.png",
+  },
+  {
     name: "Bootstrap",
     category: "Frontend",
-    icon: "bootstrap",
+    img: "https://img.icons8.com/fluency/144/bootstrap.png",
   },
   {
     name: "Tailwind",
     category: "Frontend",
-    icon: "tailwindcss",
+    img: "https://img.icons8.com/fluency/144/tailwind_css.png",
+  },
+  {
+    name: "Motion",
+    category: "Frontend",
+    img: "https://user-images.githubusercontent.com/7850794/164965523-3eced4c4-6020-467e-acde-f11b7900ad62.png",
   },
   {
     name: "Python",
     category: "Backend",
-    icon: "python",
+    img: "https://img.icons8.com/fluency/144/python.png",
   },
   {
     name: "Java",
     category: "Backend",
-    icon: "java",
+    img: "https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png",
   },
   {
     name: "C",
     category: "Backend",
-    icon: "c",
+    img: "https://img.icons8.com/fluency/144/c-programming.png",
   },
   {
     name: "C++",
     category: "Backend",
-    icon: "cplusplus",
+    img: "https://img.icons8.com/fluency/144/c-plus-plus-logo.png",
   },
   {
     name: "JavaScript",
     category: "Backend",
-    icon: "javascript",
+    img: "https://img.icons8.com/fluency/144/javascript.png",
+  },
+  {
+    name: "TypeScript",
+    category: "Backend",
+    img: "https://img.icons8.com/fluency/144/typescript--v2.png",
   },
   {
     name: "Node.js",
     category: "Backend",
-    icon: "nodedotjs",
+    img: "https://img.icons8.com/fluency/144/node-js.png",
   },
   {
     name: "PHP",
     category: "Backend",
-    icon: "php",
+    img: "https://img.icons8.com/external-those-icons-flat-those-icons/24/external-PHP-programming-and-development-those-icons-flat-those-icons.png",
   },
   {
     name: "MySQL",
     category: "Backend",
-    icon: "mysql",
+    img: "https://img.icons8.com/color/48/mysql-logo.png",
   },
   {
-    name: "Docker",
-    category: "DevOps",
-    icon: "docker",
+    name: "MongoDB",
+    category: "Backend",
+    img: "https://img.icons8.com/color/48/mongo-db.png",
   },
   {
-    name: "AWS",
-    category: "DevOps",
-    icon: "amazonwebservices",
+    name: "Redis",
+    category: "Backend",
+    img: "https://img.icons8.com/fluency/144/redis.png",
+  },
+  {
+    name: "gRPC",
+    category: "Backend",
+    img: "https://grpc.io/img/logos/grpc-icon-color.png",
   },
   {
     name: "Git",
-    category: "Programs/Tools",
+    category: "DevOps",
     icon: "git",
   },
   {
     name: "GitHub",
-    category: "Programs/Tools",
-    icon: "github",
+    category: "DevOps",
+    img: "https://img.icons8.com/stickers/50/github.png",
+  },
+  {
+    name: "Bitbucket",
+    category: "DevOps",
+    img: "https://img.icons8.com/color/48/bitbucket.png",
+  },
+  {
+    name: "AWS",
+    category: "DevOps",
+    img: "https://img.icons8.com/nolan/64/amazon-web-services.png",
+  },
+  {
+    name: "Docker",
+    category: "DevOps",
+    img: "https://img.icons8.com/fluency/144/docker.png",
+  },
+  {
+    name: "Jira",
+    category: "DevOps",
+    img: "https://img.icons8.com/color/48/jira.png",
   },
   {
     name: "Visual Studio Code",
     category: "Programs/Tools",
-    icon: "visualstudiocode",
+    img: "https://img.icons8.com/color/48/visual-studio-code-2019.png",
   },
   {
     name: "Eclipse",
     category: "Programs/Tools",
-    icon: "eclipseide",
+    img: "https://img.icons8.com/office/40/java-eclipse.png",
   },
   {
     name: "IntelliJ IDEA",
     category: "Programs/Tools",
-    icon: "intellijidea",
-  },
-  {
-    name: "PyCharm",
-    category: "Programs/Tools",
-    icon: "pycharm",
+    img: "https://img.icons8.com/color/48/intellij-idea.png",
   },
   {
     name: "Linux",
     category: "Programs/Tools",
-    icon: "linux",
+    img: "https://img.icons8.com/color/48/linux--v1.png",
   },
   {
     name: "Firebase",
     category: "Programs/Tools",
-    icon: "firebase",
-  },
-  {
-    name: "cPanel",
-    category: "Programs/Tools",
+    img: "https://img.icons8.com/color/48/firebase.png",
   },
   {
     name: "UML",
     category: "Programs/Tools",
+    img: "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/external-flow-interface-kiranshastry-lineal-color-kiranshastry.png",
   },
   {
     name: "WordPress",
     category: "Programs/Tools",
-    icon: "wordpress",
+    img: "https://img.icons8.com/fluency/144/wordpress.png",
   },
   {
     name: "Microsoft Office",
     category: "Extra",
-    icon: "microsoftoffice",
+    img: "https://img.icons8.com/color/48/office-365.png",
   },
   {
     name: "Adobe Photoshop",
     category: "Extra",
+    img: "https://img.icons8.com/color/48/adobe-photoshop--v1.png",
   },
   {
     name: "Adobe Premiere Pro",
     category: "Extra",
+    img: "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png",
   },
   {
     name: "Leadership",
     category: "Extra",
+    img: "https://img.icons8.com/color/48/coach--skin-type-5.png",
   },
   {
     name: "Problem Solving",
     category: "Extra",
+    img: "https://img.icons8.com/color/48/brain-3.png",
   },
   {
     name: "Communication",
     category: "Extra",
+    img: "https://img.icons8.com/color/48/chat--v1.png",
   },
 ];
 
