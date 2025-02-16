@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Calendar, CornerDownRight, MapPin } from "lucide-react";
 import { EXPERIENCES } from "@/constants";
 import Link from "next/link";
@@ -9,6 +11,42 @@ import {
   AccordionContent,
 } from "../ui/accordion";
 import { ExperienceTerminal } from "./ExperienceTerminal";
+
+function AchievementAccordion({ achievements }: { achievements: string[] }) {
+  const [isAchievementsOpen, setIsAchievementsOpen] = useState<boolean>(false);
+
+  return (
+    <Accordion type="single" collapsible className="w-full mb-0 pb-0">
+      <AccordionItem value="item-1" className="border-none font-content">
+        <AccordionTrigger
+          className="text-gray-300 text-lg font-normal mb-0 pb-3 underline-offset-4"
+          onClick={() =>
+            setIsAchievementsOpen((isAchievementsOpen) => !isAchievementsOpen)
+          }
+        >
+          <div className="inline-flex transition-all">
+            <CornerDownRight className="mr-2 h-6 w-6 text-blue-400" />
+            view my responsibilities / achievements
+            {isAchievementsOpen ? ":" : ""}
+          </div>
+        </AccordionTrigger>
+        <AccordionContent>
+          <ul className="space-y-2 pl-1">
+            {achievements.map((achievement, i) => (
+              <li
+                key={i}
+                className="text-gray-400 flex items-start text-base font-base py-0 my-0"
+              >
+                <span className="text-blue-400 mr-2">•</span>
+                {achievement}
+              </li>
+            ))}
+          </ul>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
 
 export function ExperienceSection() {
   return (
@@ -27,9 +65,9 @@ export function ExperienceSection() {
               >
                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-blue-400 rounded-full border-4 border-[#1E1E1E]" />
 
-                <div className="bg-[#2D2D2D] rounded-lg p-6 pb-2 border border-[#404040] hover:border-blue-400 transition-colors">
+                <div className="bg-grey rounded-lg p-6 pb-2 border border-grey-l hover:border-blue-400 transition-colors">
                   <div className="flex flex-col md:flex-row justify-between items-start mb-0">
-                    <div className="flex items-start gap-6">
+                    <div className="flex items-start gap-5">
                       <Link
                         href={exp.site}
                         target="_blank"
@@ -43,10 +81,10 @@ export function ExperienceSection() {
                       </Link>
 
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-200 mb-2">
+                        <h3 className="text-xl font-semibold text-gray-200 mb-1">
                           {exp.position}
                         </h3>
-                        <h4 className="text-base font-semibold tracking-wide text-blue-400">
+                        <h4 className="text-base font-semibold tracking-wide text-blue-400 underline underline-offset-8">
                           <Link href={exp.site} target="_blank">
                             {exp.company}
                           </Link>
@@ -54,45 +92,24 @@ export function ExperienceSection() {
                       </div>
                     </div>
 
-                    <div className="text-sm text-gray-400 text-right w-full md:w-auto flex flex-row md:flex-col mt-4 md:mt-0">
-                      <div className="flex items-center justify-end mr-4 md:mr-0 mb-0 md:mb-4">
-                        <Calendar className="w-4 h-4 mr-1 sm:mr-2" />
+                    <div className="text-base font-base font-content text-gray-400 text-right w-full md:w-auto flex flex-row md:flex-col mt-4 md:mt-0">
+                      <div className="flex items-center justify-end mr-4 md:mr-0 mb-0 md:mb-3">
+                        <Calendar
+                          className="w-4 h-4 mr-1 sm:mr-2"
+                          strokeWidth={1.75}
+                        />
                         {exp.period}
                       </div>
                       <div className="flex items-center justify-end">
-                        <MapPin className="w-4 h-4 mr-1 sm:mr-2" />
+                        <MapPin
+                          className="w-4 h-4 mr-1 sm:mr-2"
+                          strokeWidth={1.75}
+                        />
                         {exp.location}
                       </div>
                     </div>
                   </div>
-
-                  <Accordion
-                    type="single"
-                    collapsible
-                    className="w-full mb-0 pb-0"
-                  >
-                    <AccordionItem value="item-1" className="border-none">
-                      <AccordionTrigger className="text-gray-300 text-sm font-medium">
-                        <div className="inline-flex">
-                          <CornerDownRight className="mr-2 h-5 w-5" />
-                          click here to view my achievements
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        <ul className="space-y-2">
-                          {exp.achievements.map((achievement, i) => (
-                            <li
-                              key={i}
-                              className="text-gray-300 flex items-start"
-                            >
-                              <span className="text-blue-400 mr-2">•</span>
-                              {achievement}
-                            </li>
-                          ))}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
+                  <AchievementAccordion achievements={exp.achievements} />
                 </div>
               </div>
             ))}
