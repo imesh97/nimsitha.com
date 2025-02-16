@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Consolas, Helvetica, sans-serif;
+  font-family: "Fira Code", Consolas, Helvetica, sans-serif;
 }
 
 .page {
