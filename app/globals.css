@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body,
+.font-code {
   font-family: "Fira Code", Consolas, Helvetica, sans-serif;
 }
 
-.page {
+.page,
+.font-main {
   font-family: "Plus Jakarta Sans";
 }
 
-.page p {
+.page p,
+.font-content {
   font-family: "Afacad Flux";
 }
 
