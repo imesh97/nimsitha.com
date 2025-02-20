@@ -2,6 +2,7 @@ import React from "react";
 import { FileText, Github, Linkedin, Mail } from "lucide-react";
 import { NETWORKING_LINKS } from "@/constants";
 import NetworkingButton from "./NetworkingButton";
+import { HeroCircle } from "./HeroCircle";
 
 const NETWORKING_BUTTONS = [
   {
@@ -49,15 +50,16 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-
-          <div className="hidden lg:flex lg:col-span-2 relative">
-            <div className="aspect-square rounded-[1000px] overflow-hidden bg-[#2D2D2D] border border-[#404040] shadow-xl">
+          <div className="hidden xl:flex lg:col-span-2 relative">
+            <HeroCircle />
+            {/* <div className="aspect-square rounded-[1000px] overflow-hidden bg-[#2D2D2D] border border-[#404040] shadow-xl">
               <img
                 src="https://placehold.co/400x400.png"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
-            </div>
+            </div> */}
+
             {/* <div className="absolute -bottom-2 right-12 p-4 bg-[#2D2D2D] rounded-lg border border-[#404040]">
               <Code2 className="w-8 h-8 text-blue-400" />
             </div> */}
