@@ -43,7 +43,7 @@ export function ProjectCard({
               {technologies.map((tech, index) => (
                 <Badge
                   variant="default"
-                  className="text-xs font-base transition-colors bg-grey-l text-gray-300 hover:bg-blue-600 hover:text-gray-200"
+                  className="text-xs font-base transition-colors bg-grey-l text-gray-300 hover:bg-blue-600 hover:text-gray-200 cursor-default"
                   key={index}
                 >
                   {tech}

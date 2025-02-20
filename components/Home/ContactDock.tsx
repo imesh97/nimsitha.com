@@ -42,7 +42,9 @@ export function ContactDock() {
                     />
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent>{social.name}</TooltipContent>
+                <TooltipContent>
+                  <p>{social.name}</p>
+                </TooltipContent>
               </Tooltip>
             </DockIcon>
           ))}
