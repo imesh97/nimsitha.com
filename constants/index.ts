@@ -60,6 +60,34 @@ export const NETWORKING_LINKS = [
   },
 ];
 
+export const SOCIALS = [
+  {
+    name: "GitHub",
+    url: "https://github.com/imesh97/",
+    icon: "https://img.icons8.com/3d-fluency/94/github.png",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com/in/imesh-nimsitha/",
+    icon: "https://img.icons8.com/3d-fluency/94/linkedin--v1.png",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/imesh.gg/",
+    icon: "https://img.icons8.com/3d-fluency/94/instagram-new.png",
+  },
+  {
+    name: "Email",
+    url: "mailto:imesh.nimsitha@gmail.com",
+    icon: "https://img.icons8.com/3d-fluency/94/mail.png",
+  },
+  {
+    name: "X",
+    url: "https://x.com/imesh97",
+    icon: "https://img.icons8.com/fluency/144/twitterx--v1.png",
+  },
+];
+
 export const PROJECTS = [
   {
     title: "bankrpc - distributed banking",
