@@ -19,7 +19,7 @@ export const AnimatedSpan = ({
   <motion.div
     initial={{ opacity: 0, y: -5 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
+    viewport={{ once: true, margin: "0px 0px -175px 0px" }}
     transition={{ duration: 0.3, delay: delay / 1000 }}
     className={cn("grid text-sm font-normal tracking-tight", className)}
     {...props}
@@ -55,7 +55,9 @@ export const TypingAnimation = ({
   const [displayedText, setDisplayedText] = useState<string>("");
   const [started, setStarted] = useState(false);
   const elementRef = useRef<HTMLElement | null>(null);
-  const isInView = useInView(elementRef, { once: true });
+  const isInView = useInView(elementRef, {
+    once: true,
+  });
 
   useEffect(() => {
     if (!isInView) {
