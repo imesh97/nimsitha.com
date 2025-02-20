@@ -11,6 +11,7 @@ import {
   AccordionContent,
 } from "../ui/accordion";
 import { ExperienceTerminal } from "./ExperienceTerminal";
+import Image from "next/image";
 
 function AchievementAccordion({ achievements }: { achievements: string[] }) {
   const [isAchievementsOpen, setIsAchievementsOpen] = useState<boolean>(false);
@@ -73,9 +74,11 @@ export function ExperienceSection() {
                         target="_blank"
                         className="hidden sm:block"
                       >
-                        <img
+                        <Image
                           src={exp.logo}
                           alt={`${exp.company} - Logo`}
+                          width={64}
+                          height={64}
                           className="w-16 h-16 object-contain opacity-100 cursor-pointer filter grayscale-0 hover:grayscale transition-all duration-300"
                         />
                       </Link>
