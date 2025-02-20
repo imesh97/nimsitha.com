@@ -1,6 +1,5 @@
 import React from "react";
 import { HeroSection } from "./HeroSection";
-import { AboutSection } from "./AboutSection";
 import { ProjectsSection } from "./ProjectsSection";
 import { SkillsSection } from "./SkillsSection";
 import { ExperienceSection } from "./ExperienceSection";
@@ -13,7 +12,7 @@ export function HomePage() {
       className={`min-h-screen bg-grey-d ${fontContent.variable} page container mx-auto`}
     >
       <HeroSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <ExperienceSection />
       <SkillsSection />
       <ProjectsSection />
