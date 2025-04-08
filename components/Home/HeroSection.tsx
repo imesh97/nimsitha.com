@@ -30,7 +30,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           <div className="lg:col-span-3">
             <div className="space-y-3 md:space-y-5">
-              <h1 className="text-6xl font-bold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent tracking-wide">
+              <h1 className="text-6xl font-bold bg-linear-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent tracking-wide">
                 imesh nimsitha
               </h1>
               <h2 className="text-2xl text-gray-300 tracking-wide font-medium">

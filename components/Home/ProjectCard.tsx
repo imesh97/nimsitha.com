@@ -35,8 +35,8 @@ export function ProjectCard({
           />
         </div>
 
-        <div className="p-6 flex flex-col flex-grow">
-          <div className="flex-grow">
+        <div className="p-6 flex flex-col grow">
+          <div className="grow">
             <h3 className="text-xl font-semibold text-gray-200 mb-2">
               {title}
             </h3>

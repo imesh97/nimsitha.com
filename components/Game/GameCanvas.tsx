@@ -151,7 +151,7 @@ const GameCanvas: FC = () => {
       )}
       <canvas
         ref={canvasRef}
-        className="max-h-full max-w-full focus:outline-none"
+        className="max-h-full max-w-full focus:outline-hidden"
         width={800}
         height={450}
         tabIndex={1}
