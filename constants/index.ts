@@ -90,10 +90,19 @@ export const SOCIALS = [
 
 export const PROJECTS = [
   {
+    title: "symptomstream v0.1",
+    description:
+      "A real-time AI medical assistant for generating triage prompts and optimizing workflows.",
+    image: "/assets/projects/cover_symptomstream.jpeg",
+    technologies: ["Next.js", "OpenAI", "Web Speech API", "NLP", "Zustand"],
+    demoUrl: "https://symptomstream.ca",
+    githubUrl: "",
+  },
+  {
     title: "bankrpc - distributed banking",
     description:
       "A distributed banking web app with data persistence and concurrent transactions.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
+    image: "/assets/projects/cover_bankrpc.jpeg",
     technologies: ["Python", "Streamlit", "gRPC", "Redis", "AWS EC2", "Docker"],
     demoUrl: "http://ec2-3-144-116-12.us-east-2.compute.amazonaws.com:8501/",
     githubUrl: "https://github.com/imesh97/bankrpc",
@@ -102,7 +111,7 @@ export const PROJECTS = [
     title: "affinity.ai - crm",
     description:
       "A lead generation & automation CRM for car dealerships, powered by AI.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
+    image: "/assets/projects/cover_affinity.jpeg",
     technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
     demoUrl: "https://affinity.nimsitha.com",
     githubUrl: "https://github.com/imesh97/affinity",
@@ -111,7 +120,7 @@ export const PROJECTS = [
     title: "nimdb - database server",
     description:
       "A nimble in-memory database server for caching and session storage.",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+    image: "/assets/projects/cover_nimdb.jpeg",
     technologies: [
       "C",
       "Trees",
@@ -126,7 +135,7 @@ export const PROJECTS = [
     title: "raphael - ai image editor",
     description:
       "A SaaS web app that transforms images using external AI models.",
-    image: "https://images.unsplash.com/photo-1551721434-8b94ddff0e6d",
+    image: "/assets/projects/cover_raphael.jpeg",
     technologies: [
       "Next.js",
       "Cloudinary",
@@ -142,7 +151,7 @@ export const PROJECTS = [
     title: "kylian - ml soccer analysis",
     description:
       "A soccer analysis system for tracking and predicting player movement.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: "/assets/projects/cover_kylian.jpeg",
     technologies: ["Python", "YOLOv8", "OpenCV", "NumPy", "Colab"],
     demoUrl: "https://demo.com",
     githubUrl: "https://github.com/imesh97/kylian",
