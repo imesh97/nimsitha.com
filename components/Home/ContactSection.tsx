@@ -6,7 +6,7 @@ export function ContactSection() {
     <div className="pt-20 pb-12">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl text-center font-bold mb-4 text-gray-200 tracking-wide">
-          wanna talk?
+          wanna connect?
         </h2>
 
         <ContactDock />

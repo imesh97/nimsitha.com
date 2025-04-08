@@ -30,7 +30,7 @@ export function HeroCircle() {
         centerText={
           <div className="text-xl font-bold text-[#444444] cursor-default inline-flex items-center justify-center align-middle">
             <BrainCircuit className="mr-1" />
-            imesh.
+            nimsitha
           </div>
         }
         size="md"

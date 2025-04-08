@@ -3,6 +3,7 @@ import { Github, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 interface ProjectCardProps {
   title: string;
@@ -25,9 +26,11 @@ export function ProjectCard({
     <div className="relative overflow-hidden">
       <div className="grid-col-1 group bg-grey rounded-lg overflow-hidden border border-grey-l hover:border-blue-400 transition-all h-full flex flex-col">
         <div className="aspect-video overflow-hidden">
-          <img
+          <Image
             src={image}
             alt={title}
+            width={640}
+            height={360}
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
           />
         </div>
@@ -63,16 +66,22 @@ export function ProjectCard({
               </Link>
             </Button>
 
-            <Button
-              asChild
-              variant={"link"}
-              className="text-sm text-gray-300 hover:text-blue-400 p-3"
-            >
-              <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
-                <Github className="w-4 h-4" />
-                <span>source</span>
-              </Link>
-            </Button>
+            {githubUrl.length > 0 && (
+              <Button
+                asChild
+                variant={"link"}
+                className="text-sm text-gray-300 hover:text-blue-400 p-3"
+              >
+                <Link
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>source</span>
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
       </div>
