@@ -12,7 +12,7 @@ export default function SkillsTab({ skills }: { skills: Skill[] }) {
           <TabsTrigger
             key={`trigger-${category}`}
             value={category}
-            className="text-base w-full bg-grey-d underline underline-offset-4"
+            className="text-base w-full bg-grey-d underline underline-offset-4 cursor-pointer"
           >
             {category}
           </TabsTrigger>

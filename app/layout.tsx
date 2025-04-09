@@ -19,7 +19,7 @@ export const fontContent2 = Afacad_Flux({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Imesh Nimsitha",
+  title: "imesh nimsitha",
   description:
     "Imesh Nimsitha's Personal Portfolio for Software Development, Graphic Design, and More",
 };
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${fontCode.variable} antialiased scroll-smooth`}>
         <CodeLayout>{children}</CodeLayout>
       </body>
