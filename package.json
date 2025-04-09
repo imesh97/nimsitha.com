@@ -22,6 +22,8 @@
     "matter-js": "^0.20.0",
     "motion": "^11.18.2",
     "next": "15.2.4",
+    "nextra": "^4.2.17",
+    "nextra-theme-blog": "^4.2.17",
     "poly-decomp": "^0.3.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",

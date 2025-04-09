@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import nextra from "nextra";
 
 const nextConfig: NextConfig = {
   images: {
@@ -12,4 +13,9 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const withNextra = nextra({
+  contentDirBasePath: "/blog",
+  defaultShowCopyCode: true,
+});
+
+export default withNextra(nextConfig);
