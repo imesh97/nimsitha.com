@@ -1,0 +1,33 @@
+---
+title: Self-attention Mechanisms
+description: A simple way to understand self-attention mechanisms using a Game of Thrones analogy.
+tags: [computer science, machine learning, natural language processing]
+---
+
+## 🗒️ Attention Mechanisms [#attention-mechanisms]
+
+### Introduction [#introduction]
+
+**You are asked:** "Which TV series is this dialogue from?"
+
+**The dialogue:** "A Lannister always pays his debts."
+
+<br />
+**The thought process:** You recognize the word `Lannister`. This word _alone_ tells
+you that this dialogue is from the `Game of Thrones` series, as you know some _context_
+about it, or have watched the series before. In fact, you might be even _more precise_
+and say that this is a quote from `Tyrion Lannister` himself.
+
+**Imagine the same question** was asked to someone who has _never_ watched the series before. They do not have the relevant _context_ to answer the question _accurately_. In that case, you would provide them a script, clip, or another _piece of information_ that helps them better _understand_ the dialogue in its _full_ context.
+
+Then, if you **re-asked them the same question**, they would now have a _similar thought process_ as to someone who has already watched the series. They would have an _accurate_ answer: the word `Lannister` _alone_ will tell them.
+
+This _thought process_ describes how the **_attention mechanism_** works.
+
+### Concept [#concept]
+
+The **_attention mechanism_** is based on the _human intuition_ that enables us to selectively _focus_ on, or _attend_ to, _specific_ parts of a _larger_ piece of information to better _understand_ it. In order to do this, we need _context_ and the ability to _retain_ that context _long-term_.
+
+The same concept applies to _computers_ and _natural language processing_ (NLP). The models for NLP, known as _transformers_, use the attention mechanism in order to have _long-term memory_. When processing a smaller sequence of tokens from a larger input sequence, a model with this mechanism can still _focus_ on or _attend_ to the tokens that were _previously_ processed. The mechanism enables the model to work with a _larger reference window_. So, while reading a sentence, it will _still remember_ the paragraph's context, and even the _full_ story's context.
+
+The same concept is applied to _Recurrent Neural Networks_ (RNNs), _Gated Recurrent Units_ (GRUs) and _Long-short Term Memory_ (LSTM) networks, but these models use _different_ mechanisms. **The issue:** they use mechanisms that have _shorter_ reference windows. As stories get longer, the earliest sequences of tokens are _no longer_ accessible, and become _forgotten_ in context. They fall out of reference. On the contrary, the attention mechanism can theoretically have an _infinite_ reference window (when given the necessary _compute power_). It can process the story in _full_.
