@@ -4,6 +4,7 @@ import { getPageMap } from "nextra/page-map";
 import "nextra-theme-blog/style.css";
 import Link from "next/link";
 import "@/app/globals.css";
+import "./styles.css";
 
 export const metadata = {
   title: "imesh nimsitha's blog",
@@ -23,7 +24,7 @@ export default async function RootLayout({
       {children}
 
       <Footer>
-        {new Date().getFullYear()} © Imesh Nimsitha.
+        {new Date().getFullYear()} Imesh Nimsitha.
         <Link href="/rss.xml" style={{ float: "right" }}>
           RSS
         </Link>

@@ -31,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fontCode.variable} antialiased scroll-smooth`}>
+      <body
+        className={`${fontContent.variable} ${fontContent2.variable} ${fontCode.variable} antialiased scroll-smooth`}
+      >
         <CodeLayout>{children}</CodeLayout>
       </body>
     </html>
