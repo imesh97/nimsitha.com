@@ -22,9 +22,9 @@ export const NAVIGATION = [
         ],
       },
       {
-        id: "8",
+        id: "9",
         isSelectable: true,
-        name: "lib",
+        name: "blog",
         children: [
           {
             id: "9",

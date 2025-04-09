@@ -21,6 +21,9 @@ export function FileTree() {
       case "projects/overview.tsx":
         router.push("/projects");
         break;
+      case "blog.tsx":
+        router.push("/blog");
+        break;
       default:
         break;
     }
@@ -70,6 +73,12 @@ export function FileTree() {
               </p>
             </File>
           </Folder>
+          <File
+            value="blog.tsx"
+            fileIcon={<FileIcon filename="blog.tsx" className="w-4 h-4" />}
+          >
+            <p onClick={() => handleSelect("blog.tsx")}>blog.tsx</p>
+          </File>
         </Folder>
       </Tree>
     </div>
