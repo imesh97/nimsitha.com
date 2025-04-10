@@ -1,4 +1,5 @@
 ---
+
 title: Natural Language Processing Pipeline in Healthcare Triage
 description: A detailed explanation of a hypothetical NLP pipeline in healthcare triage.
 tags:
@@ -9,6 +10,7 @@ tags:
     healthcare triage,
     medical informatics,
   ]
+
 ---
 
 ✏️ Article written for [**SymptomStream**](https://symptomstream.ca/).
@@ -118,7 +120,7 @@ The pipeline's effectiveness is measured using <i>evaluation metrics</i>, such a
 - <b>Example:</b> 
   - Patient initially reports pain began "this morning" → later mentions it started "yesterday" → system flags inconsistency for clarification
 
-## 3. Integrated Analysis (Hub) 🧠
+## 3. Integrated Analysis 🧠
 
 ### 3.1. Definition
 
@@ -137,14 +139,49 @@ The pipeline's effectiveness is measured using <i>evaluation metrics</i>, such a
 
 ### 3.2. Connections
 
-| Component | Sends to Hub | Receives from Hub |
-| :--- | :--- | :--- |
-| <i><b>Entity Recognition and Extraction</b></i> | • Structured medical entities | • Refinement requests for ambiguous terms<br />• Contextual clues to resolve entity confusion<br />• Contradiction flags (for entity re-assessment) |
-| <i><b>Semantic Understanding</b></i> | • Interpreted meanings of patient statements<br />• Severity assessments<br />• Contextual relationships between symptoms | • Requests to clarify ambiguous meanings<br />• Knowledge about related symptoms from other components<br />• Historical context from medical records |
-| <i><b>Risk Factor Assessment</b></i> | • Patient risk profiles<br />• Comorbidity impact assessments<br />• Historical condition relevance | • New symptom info forces re-assessment of risk<br />• Contradiction resolutions that affect risk assessments<br />• Temporal patterns suggesting changing risk levels |
-| <i><b>Pattern Recognition</b></i> | • Identified symptom clusters<br />• Statistical associations<br />• Recognized clinical presentations (context) | • Temporal info about symptom evolution<br />• Contradiction resolutions that alter pattern confidence<br />• Additional context that may alter pattern validity |
-| <i><b>Temporal Analysis</b></i> | • Symptom progression timelines<br />• Deterioration / improvement trends<br />• Cyclical patterns | • New info that requires timeline re-assessment<br />• Contradiction resolutions affecting chronology<br />• Risk factors that influence temporal interpretation |
-| <i><b>Contradiction Detection</b></i> | • Identified inconsistencies<br />• Confidence scores for conflicting statements<br />• Resolved contradictions | • Context that may explain contradictions<br />• Temporal info that resolves time-based inconsistencies |
+import { Table } from "nextra/components"
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Component</Table.Th>
+      <Table.Th>Sends to Hub</Table.Th>
+      <Table.Th>Receives from Hub</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><i><b>Entity Recognition and Extraction</b></i></Table.Td>
+      <Table.Td>• Structured medical entities</Table.Td>
+      <Table.Td>• Refinement requests for ambiguous terms<br />• Contextual clues to resolve entity confusion<br />• Contradiction flags (for entity re-assessment)</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Semantic Understanding</b></i></Table.Td>
+      <Table.Td>• Interpreted meanings of patient statements<br />• Severity assessments<br />• Contextual relationships between symptoms</Table.Td>
+      <Table.Td>• Requests to clarify ambiguous meanings<br />• Knowledge about related symptoms from other components<br />• Historical context from medical records</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Risk Factor Assessment</b></i></Table.Td>
+      <Table.Td>• Patient risk profiles<br />• Comorbidity impact assessments<br />• Historical condition relevance</Table.Td>
+      <Table.Td>• New symptom info forces re-assessment of risk<br />• Contradiction resolutions that affect risk assessments<br />• Temporal patterns suggesting changing risk levels</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Pattern Recognition</b></i></Table.Td>
+      <Table.Td>• Identified symptom clusters<br />• Statistical associations<br />• Recognized clinical presentations (context)</Table.Td>
+      <Table.Td>• Temporal info about symptom evolution<br />• Contradiction resolutions that alter pattern confidence<br />• Additional context that may alter pattern validity</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Temporal Analysis</b></i></Table.Td>
+      <Table.Td>• Symptom progression timelines<br />• Deterioration / improvement trends<br />• Cyclical patterns</Table.Td>
+      <Table.Td>• New info that requires timeline re-assessment<br />• Contradiction resolutions affecting chronology<br />• Risk factors that influence temporal interpretation</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Contradiction Detection</b></i></Table.Td>
+      <Table.Td>• Identified inconsistencies<br />• Confidence scores for conflicting statements<br />• Resolved contradictions</Table.Td>
+      <Table.Td>• Context that may explain contradictions<br />• Temporal info that resolves time-based inconsistencies</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
 
 ## 4. Feedback Loops 🔁
 
@@ -159,23 +196,74 @@ This mechanism consists of a set of specialized "<i>emergency channels</i>" that
 
 ### 4.2. Connections
 
-| | Contradiction Detection → Entity Recognition |
-| :--- | :--- |
-| <i><b>Purpose</b></i> | Contradiction is found → often requires <i>immediate</i> re-examination of entities |
-| <i><b>Example</b></i> | > Patient says "no chest pain" but later describes "chest discomfort".<br /> Contradiction detected: flag <i>inconsistency</i>.<br /> Tell the Entity Recognition component to <i>re-examine</i> what symptoms were <i>actually</i> reported. |
-| <i><b>Why direct?</b></i> | Some contradictions show <i>fundamental</i> entity misinterpretations → must be correct at the source <i>before</i> further analysis can proceed |
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>4.2.1.</Table.Th>
+      <Table.Th>Contradiction Detection → Entity Recognition</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><i><b>Purpose</b></i></Table.Td>
+      <Table.Td>Contradiction is found → often requires <i>immediate</i> re-examination of entities</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Example</b></i></Table.Td>
+      <Table.Td>> Patient says "no chest pain" but later describes "chest discomfort".<br /> Contradiction detected: flag <i>inconsistency</i>.<br /> Tell the Entity Recognition component to <i>re-examine</i> what symptoms were <i>actually</i> reported.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Why direct?</b></i></Table.Td>
+      <Table.Td>Some contradictions show <i>fundamental</i> entity misinterpretations → must be correct at the source <i>before</i> further analysis can proceed</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
 
-| | Temporal Analysis → Risk Assessment |
-| :--- | :--- |
-| <i><b>Purpose</b></i> | Time-based patterns <i>directly</i> modify risk evaluations (without needing integration) |
-| <i><b>Example</b></i> | > Identifies <i>rapidly worsening</i> symptoms over the past hour.<br /> <i>Immediate</i> elevation of Risk Assessment, regardless of other factors. |
-| <i><b>Why direct?</b></i> | Certain temporal patterns (such as rapid deterioration) are <i>universally significant</i> risk modifiers → should trigger <i>immediate</i> risk re-assessment |
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>4.2.2.</Table.Th>
+      <Table.Th>Temporal Analysis → Risk Assessment</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><i><b>Purpose</b></i></Table.Td>
+      <Table.Td>Time-based patterns <i>directly</i> modify risk evaluations (without needing integration)</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Example</b></i></Table.Td>
+      <Table.Td>> Identifies <i>rapidly worsening</i> symptoms over the past hour.<br /> <i>Immediate</i> elevation of Risk Assessment, regardless of other factors.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Why direct?</b></i></Table.Td>
+      <Table.Td>Certain temporal patterns (such as rapid deterioration) are <i>universally significant</i> risk modifiers → should trigger <i>immediate</i> risk re-assessment</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
 
-| | Pattern Recognition → Semantic Understanding |
-| :--- | :--- |
-| <i><b>Purpose</b></i> | Identified patterns provide <i>context</i> that can immediately clarify semantic interpretation |
-| <i><b>Example</b></i> | > Identifies a <i>constellation</i> of symptoms matching pneumonia.<br /> Sends <i>contextual knowledge</i> to Semantic Understanding.<br /> Results in <i>correct</i> interpretation of the patient describing "heaviness in chest" as a respiratory (rather than a cardiac) symptom. |
-| <i><b>Why direct?</b></i> | Context can immediately <i>resolve</i> semantic ambiguities → can stop them from <i>persisting</i> through multiple analysis cycles |
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>4.2.3.</Table.Th>
+      <Table.Th>Pattern Recognition → Semantic Understanding</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td><i><b>Purpose</b></i></Table.Td>
+      <Table.Td>Identified patterns provide <i>context</i> that can immediately clarify semantic interpretation</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Example</b></i></Table.Td>
+      <Table.Td>> Identifies a <i>constellation</i> of symptoms matching pneumonia.<br /> Sends <i>contextual knowledge</i> to Semantic Understanding.<br /> Results in <i>correct</i> interpretation of the patient describing "heaviness in chest" as a respiratory (rather than a cardiac) symptom.</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td><i><b>Why direct?</b></i></Table.Td>
+      <Table.Td>Context can immediately <i>resolve</i> semantic ambiguities → can stop them from <i>persisting</i> through multiple analysis cycles</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
 
 ## 5. Input Sources ➡️
 
