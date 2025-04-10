@@ -13,6 +13,17 @@ const blogComponents = getBlogMDXComponents({
       {children}
     </p>
   ),
+  li: ({ children }) => (
+    <li
+      style={{
+        fontFamily: "var(--font-content2)",
+        fontSize: "20px",
+        lineHeight: "1.4",
+      }}
+    >
+      {children}
+    </li>
+  ),
   h2: ({ children }) => (
     <h2
       style={{

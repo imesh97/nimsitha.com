@@ -1,7 +1,30 @@
-i {
-  color: var(--color-blue-300);
+#blog-content i {
+  color: var(--color-blue-400);
 }
 
-b {
-  color: var(--color-blue-400);
+#blog-content b {
+  color: var(--color-red-400);
+}
+
+#blog-content button {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.nextra-tag {
+  background-color: var(--color-grey-l);
+  color: var(--color-gray-300);
+  border-radius: calc(infinity * 1px);
+  padding: 4px 12px;
+  transition: all 0.2s ease-in-out;
+  font-size: 16px;
+  cursor: default;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: var(--font-content2);
+}
+
+.nextra-tag:hover {
+  background-color: var(--color-blue-600);
+  color: var(--color-gray-200);
 }

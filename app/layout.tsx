@@ -19,7 +19,7 @@ export const fontContent2 = Afacad_Flux({
 });
 
 export const metadata: Metadata = {
-  title: "imesh nimsitha",
+  title: "imesh nimsitha's portfolio",
   description:
     "Imesh Nimsitha's Personal Portfolio for Software Development, Graphic Design, and More",
 };

@@ -27,12 +27,13 @@ export default async function BlogPage() {
           <Link
             key={tag}
             href={`/tags/${tag}`}
-            className="bg-grey-l text-gray-300 hover:bg-blue-600 hover:text-gray-200 cursor-default px-3 rounded-full transition-colors duration-300"
+            className="font-base bg-grey-l text-gray-300 hover:bg-blue-600 hover:text-gray-200 cursor-default px-3 rounded-full transition-colors duration-300 font-(family-name:--font-content2)"
           >
             {tag} ({count})
           </Link>
         ))}
       </div>
+      <hr />
       {posts.map((post) => (
         <PostCard key={post.route} post={post} />
       ))}

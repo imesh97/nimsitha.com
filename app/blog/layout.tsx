@@ -21,7 +21,7 @@ export default async function RootLayout({
         <Search placeholder="Search posts..." />
       </Navbar>
 
-      {children}
+      <div id="blog-content">{children}</div>
 
       <Footer>
         {new Date().getFullYear()} Imesh Nimsitha.
