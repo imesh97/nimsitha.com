@@ -4,19 +4,21 @@ description: A simple way to understand self-attention mechanisms using a Game o
 tags: [computer science, machine learning, natural language processing]
 ---
 
-## Introduction [#introduction]
+## 🍿 Introduction [#introduction]
 
 <b>You are asked:</b> "Which TV series is this dialogue from?"
 
 <b>The dialogue:</b> "A Lannister always pays his debts."
-<br />
-<b>The thought process:</b> You recognize the word `Lannister`. This word
-<i>alone</i> tells you that this dialogue is from the `Game of Thrones` series,
-as you know some <i>context</i> about it, or have watched the series before. In
-fact, you might be even <i>more precise</i> and say that this is a quote from
-`Tyrion Lannister` himself.
 
-<b>Imagine the same question:</b> was asked to someone who has <i>never</i> watched
+---
+
+<b>The thought process:</b> You recognize the word `Lannister`. This word
+<i>alone</i> tells you that this dialogue is from the `Game of Thrones` series, as
+you know some <i>context</i> about it, or have watched the series before. In fact,
+you might be even <i>more precise</i> and say that this is a quote from `Tyrion Lannister`
+himself.
+
+<b>Imagine the same question</b> was asked to someone who has <i>never</i> watched
 the series before. They do not have the relevant <i>context</i> to answer the question
 <i>accurately</i>. In that case, you would provide them a script, clip, or
 another <i>piece of information</i> that helps them better <i>understand</i> the
@@ -24,11 +26,11 @@ dialogue in its <i>full</i> context.
 
 Then, if you <b>re-asked them the same question</b>, they would now have a <i>similar thought process</i> as to someone who has already watched the series. They would have an <i>accurate</i> answer: the word `Lannister` <i>alone</i> will tell them.
 
-This <i>thought process</i> describes how the <b><i>attention mechanism</i></b> works.
+This <i>thought process</i> describes how the <i><b>attention mechanism</b></i> works.
 
-## Concept [#concept]
+## ✅ Concept [#concept]
 
-The <b><i>attention mechanism</i></b> is based on the <i>human intuition</i> that enables us to selectively <i>focus</i> on, or <i>attend</i> to, <i>specific</i> parts of a <i>larger</i> piece of information to better <i>understand</i> it. In order to do this, we need <i>context</i> and the ability to <i>retain</i> that context <i>long-term</i>.
+The <i><b>attention mechanism</b></i> is based on the <i>human intuition</i> that enables us to selectively <i>focus</i> on, or <i>attend</i> to, <i>specific</i> parts of a <i>larger</i> piece of information to better <i>understand</i> it. In order to do this, we need <i>context</i> and the ability to <i>retain</i> that context <i>long-term</i>.
 
 The same concept applies to <i>computers</i> and <i>natural language processing</i> (NLP). The models for NLP, known as <i>transformers</i>, use the attention mechanism in order to have <i>long-term memory</i>. When processing a smaller sequence of tokens from a larger input sequence, a model with this mechanism can still <i>focus</i> on or <i>attend</i> to the tokens that were <i>previously</i> processed. The mechanism enables the model to work with a <i>larger reference window</i>. So, while reading a sentence, it will <i>still remember</i> the paragraph's context, and even the <i>full</i> story's context.
 
