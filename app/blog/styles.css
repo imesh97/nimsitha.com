@@ -11,6 +11,10 @@
   background-color: transparent;
 }
 
+body {
+  overflow-y: hidden;
+}
+
 .nextra-tag {
   background-color: var(--color-grey-l);
   color: var(--color-gray-300);
