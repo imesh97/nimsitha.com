@@ -1,3 +1,3 @@
 export default function Projects() {
-  return <div>Still working on this...</div>;
+  return <div>still working on this...</div>;
 }
