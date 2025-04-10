@@ -11,6 +11,7 @@ interface ProjectCardProps {
   image: string;
   technologies: string[];
   demoUrl: string;
+  demoUrlText?: string;
   githubUrl: string;
 }
 
@@ -20,6 +21,7 @@ export function ProjectCard({
   image,
   technologies,
   demoUrl,
+  demoUrlText,
   githubUrl,
 }: ProjectCardProps) {
   return (
@@ -62,7 +64,7 @@ export function ProjectCard({
             >
               <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4" />
-                <span className="inline">demo</span>
+                <span className="inline">{demoUrlText ? demoUrlText : "demo"}</span>
               </Link>
             </Button>
 
