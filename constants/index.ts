@@ -99,39 +99,42 @@ export const PROJECTS = [
     githubUrl: "",
   },
   {
-    title: "bankrpc - distributed banking",
-    description:
-      "A distributed banking web app with data persistence and concurrent transactions.",
-    image: "/assets/projects/cover_bankrpc.jpeg",
-    technologies: ["Python", "Streamlit", "gRPC", "Redis", "AWS EC2", "Docker"],
-    demoUrl: "http://ec2-3-144-116-12.us-east-2.compute.amazonaws.com:8501/",
-    githubUrl: "https://github.com/imesh97/bankrpc",
-  },
-  {
     title: "affinity.ai - crm",
     description:
       "A lead generation & automation CRM for car dealerships, powered by AI.",
     image: "/assets/projects/cover_affinity.jpeg",
     technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-    demoUrl: "https://affinity.nimsitha.com",
+    demoUrl: "https://affinityautogroup.ca",
     githubUrl: "https://github.com/imesh97/affinity",
   },
-  {
-    title: "nimdb - database server",
+  { 
+    title: "nexusquiz - trivia game",
     description:
-      "A nimble in-memory database server for caching and session storage.",
-    image: "/assets/projects/cover_nimdb.jpeg",
-    technologies: [
-      "C",
-      "Trees",
-      "Hashing",
-      "Bloom Filters",
-      "Socket Programming",
-    ],
-    demoUrl: "https://demo.com",
-    githubUrl: "https://github.com",
+      "A real-time multiplayer game with leader election, state replication and fault tolerance.",
+    image: "/assets/projects/cover_nexusquiz.jpeg",
+    technologies: ["Next.js", "FastAPI", "WebSockets", "Socket.IO", "Raft Consensus"],
+    demoUrl: "https://drive.google.com/file/d/1ZJU_cDErc5cFRO5KBX-DtXh0k9jFPeNh/view?usp=sharing",
+    githubUrl: "https://github.com/imesh97/nexusquiz",
   },
   {
+    title: "tunetype - genre classifier",
+    description:
+      "Using Multinomial Naive Bayes, Support Vector Machine, and finetuned BERT models.",
+    image: "/assets/projects/cover_tunetype.jpeg",
+    technologies: ["Python", "TensorFlow", "Transformers", "Google BERT", "scikit-learn"],
+    demoUrl: "https://github.com/imesh97/tunetype/blob/main/report.pdf",
+    githubUrl: "https://github.com/imesh97/tunetype",
+    demoUrlText: "report",
+  },
+  {
+    title: "bankrpc - distributed banking",
+    description:
+      "A distributed banking system with data persistence and transaction concurrency.",
+    image: "/assets/projects/cover_bankrpc.jpeg",
+    technologies: ["Python", "Streamlit", "gRPC", "Redis", "AWS EC2", "Docker"],
+    demoUrl: "http://ec2-3-144-116-12.us-east-2.compute.amazonaws.com:8501/",
+    githubUrl: "https://github.com/imesh97/bankrpc",
+  },{
     title: "raphael - ai image editor",
     description:
       "A SaaS web app that transforms images using external AI models.",
@@ -144,17 +147,8 @@ export const PROJECTS = [
       "Clerk",
       "Zod",
     ],
-    demoUrl: "https://demo.com",
+    demoUrl: "https://raphael.nimsitha.com",
     githubUrl: "https://github.com/imesh97/raphael-ai",
-  },
-  {
-    title: "kylian - ml soccer analysis",
-    description:
-      "A soccer analysis system for tracking and predicting player movement.",
-    image: "/assets/projects/cover_kylian.jpeg",
-    technologies: ["Python", "YOLOv8", "OpenCV", "NumPy", "Colab"],
-    demoUrl: "https://demo.com",
-    githubUrl: "https://github.com/imesh97/kylian",
   },
 ];
 
@@ -170,7 +164,7 @@ interface Experience {
 
 export const EXPERIENCES: Experience[] = [
   {
-    company: "Affinity Solutions",
+    company: "Affinity Auto Group",
     position: "Software Developer",
     period: "Dec. 2024 — Present",
     location: "Remote",
@@ -181,7 +175,7 @@ export const EXPERIENCES: Experience[] = [
       "Implemented core prototype features: lead scoring algorithms and customer journey mapping.",
     ],
     logo: "/assets/logo_affinity.svg",
-    site: "https://affinity.nimsitha.com",
+    site: "https://affinityautogroup.ca",
   },
   {
     company: "SymptomStream",
@@ -189,8 +183,8 @@ export const EXPERIENCES: Experience[] = [
     period: "July 2024 — Present",
     location: "Hamilton, CA",
     achievements: [
-      "Led development of AI-powered software for optimizing hospital triage processes to enhance ER decision-making and operational efficiency.",
-      "Collaborated with 10+ stakeholders to gather technical requirements, refine architecture, and ensure alignment with business objectives.",
+      "Led development of AI-powered prototype for optimizing hospital triage processes to enhance ER decision-making and operational efficiency.",
+      "Collaborated with 20+ stakeholders to gather technical requirements, refine architecture, and ensure alignment with business objectives.",
       "Directed project toward prototype phase by defining technical milestones and ensuring timely delivery of development goals.",
     ],
     logo: "/assets/logo_symptomstream.png",
@@ -403,6 +397,16 @@ export const SKILLS = [
     name: "Stripe",
     category: "Backend",
     img: "https://img.icons8.com/fluency/144/stripe.png",
+  },
+  {
+    name: "FastAPI",
+    category: "Backend",
+    img: "/assets/icons/fastapi.png"
+  },
+  {
+    name: "TensorFlow",
+    category: "Backend",
+    img: "https://img.icons8.com/color/48/tensorflow.png"
   },
   {
     name: "WordPress",
