@@ -96,7 +96,16 @@ export const PROJECTS = [
     image: "/assets/projects/cover_symptomstream.jpeg",
     technologies: ["Next.js", "OpenAI", "Web Speech API", "NLP", "Zustand"],
     demoUrl: "https://symptomstream.ca",
+    demoUrlText: "live",
     githubUrl: "",
+  },{ 
+    title: "nexusquiz - trivia game",
+    description:
+      "Real-time multiplayer with leader election, state replication and fault tolerance.",
+    image: "/assets/projects/cover_nexusquiz.jpeg",
+    technologies: ["Next.js", "FastAPI", "WebSockets", "Socket.IO", "Raft Consensus"],
+    demoUrl: "https://drive.google.com/file/d/1ZJU_cDErc5cFRO5KBX-DtXh0k9jFPeNh/view?usp=sharing",
+    githubUrl: "https://github.com/imesh97/nexusquiz",
   },
   {
     title: "affinity.ai - crm",
@@ -105,21 +114,13 @@ export const PROJECTS = [
     image: "/assets/projects/cover_affinity.jpeg",
     technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
     demoUrl: "https://affinityautogroup.ca",
+    demoUrlText: "live",
     githubUrl: "https://github.com/imesh97/affinity",
   },
-  { 
-    title: "nexusquiz - trivia game",
-    description:
-      "A real-time multiplayer game with leader election, state replication and fault tolerance.",
-    image: "/assets/projects/cover_nexusquiz.jpeg",
-    technologies: ["Next.js", "FastAPI", "WebSockets", "Socket.IO", "Raft Consensus"],
-    demoUrl: "https://drive.google.com/file/d/1ZJU_cDErc5cFRO5KBX-DtXh0k9jFPeNh/view?usp=sharing",
-    githubUrl: "https://github.com/imesh97/nexusquiz",
-  },
   {
-    title: "tunetype - genre classifier",
+    title: "tunetype - lyric classifier",
     description:
-      "Using Multinomial Naive Bayes, Support Vector Machine, and finetuned BERT models.",
+      "Using Multinomial Naive Bayes, Support Vector Machine, and fine-tuned BERT models.",
     image: "/assets/projects/cover_tunetype.jpeg",
     technologies: ["Python", "TensorFlow", "Transformers", "Google BERT", "scikit-learn"],
     demoUrl: "https://github.com/imesh97/tunetype/blob/main/report.pdf",
