@@ -9,7 +9,7 @@ export function ProjectsSection() {
   return (
     <div className="py-12 bg-[#1E1E1E]">
       <div className="max-[24rem]:max-w-[16rem] max-[25rem]:max-w-[18rem] max-[27rem]:max-w-[23rem] sm:max-w-6xl sm:mx-auto px-0 sm:px-6">
-        <div className="relative flex flex-row mb-10 gap-4">
+        <div className="relative flex flex-row mb-10 gap-4 justify-between sm:justify-start">
           <h2 className="text-3xl font-semibold text-gray-200 tracking-wide">
             i like working <br className="inline sm:hidden"/>on projects.
           </h2>
@@ -20,7 +20,7 @@ export function ProjectsSection() {
             )}
           >
             view all
-            <ArrowRight className="w-4 h-4 inline ml-2" />
+            <ArrowRight className="w-4 h-4 hidden sm:inline ml-2" />
           </Link>
         </div>
 

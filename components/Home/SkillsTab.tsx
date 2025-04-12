@@ -26,7 +26,7 @@ export default function SkillsTab({ skills }: { skills: Skill[] }) {
               .map((skill, index) => (
                 <div
                   key={index}
-                  className="text-xl font-content font-semibold p-3 text-gray-200 inline-flex items-center gap-2 filter grayscale-0 hover:grayscale cursor-pointer transition-all duration-300"
+                  className="text-lg sm:text-xl font-content font-semibold p-3 text-gray-200 inline-flex items-center gap-2 filter grayscale-0 hover:grayscale cursor-pointer transition-all duration-300"
                 >
                   <Image
                     src={skill.img}
