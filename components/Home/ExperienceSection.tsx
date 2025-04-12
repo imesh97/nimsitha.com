@@ -27,7 +27,7 @@ function AchievementAccordion({ achievements }: { achievements: string[] }) {
         >
           <div className="text-left inline-flex transition-all">
             <CornerDownRight className="mr-2 h-6 w-6 text-blue-400" />
-            view my responsibilities<span className="hidden sm:inline"> / achievements</span>
+            view my responsibilities{" "}<span className="hidden sm:inline"> / achievements</span>
             {isAchievementsOpen ? ":" : ""}
           </div>
         </AccordionTrigger>
