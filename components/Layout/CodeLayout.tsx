@@ -3,7 +3,6 @@ import Sidebar from "@/components/Layout/Sidebar";
 import ActivityBar from "@/components/Layout/ActivityBar";
 import StatusBar from "@/components/Layout/StatusBar";
 import { Editor } from "@/components/Layout/Editor";
-import { fontCode } from "@/app/layout";
 
 export default function CodeLayout({
   children,
@@ -12,7 +11,7 @@ export default function CodeLayout({
 }) {
   return (
     <div
-      className={`h-screen flex flex-col bg-grey-d text-white ${fontCode.variable}`}
+      className={`h-screen flex flex-col bg-grey-d text-white code-layout`}
     >
       <div className="h-10 bg-[#323233] flex items-center px-4 border-b border-[#424242]">
         <div className="flex space-x-2">

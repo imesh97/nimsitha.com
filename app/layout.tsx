@@ -3,17 +3,17 @@ import { Afacad_Flux, Fira_Code, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import CodeLayout from "@/components/Layout/CodeLayout";
 
-export const fontCode = Fira_Code({
+const fontCode = Fira_Code({
   variable: "--font-main",
   subsets: ["latin"],
 });
 
-export const fontContent = Plus_Jakarta_Sans({
+const fontContent = Plus_Jakarta_Sans({
   variable: "--font-content",
   subsets: ["latin"],
 });
 
-export const fontContent2 = Afacad_Flux({
+const fontContent2 = Afacad_Flux({
   variable: "--font-content2",
   subsets: ["latin"],
 });

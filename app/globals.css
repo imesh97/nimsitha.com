@@ -109,3 +109,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-tertiary);
 }
+
+.code-layout {
+  font-family: 'Fira Code', Consolas, Helvetica, sans-serif;
+}
+
+.home-page {
+  font-family: 'Plus Jakarta Sans';
+}
