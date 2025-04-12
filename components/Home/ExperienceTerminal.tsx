@@ -14,11 +14,11 @@ export function ExperienceTerminal() {
       </AnimatedSpan>
 
       <AnimatedSpan delay={3000} className="text-xs text-yellow-500">
-        <span>$ Analyzing entry point: ANVIROS</span>
+        <span>$ Analyzing entry point: Rangara</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={3500} className="text-xs text-gray-200">
-        <span>→ Built high-traffic web platform and lead capture system</span>
+        <span>→ Built high-traffic commercial platform and admin interface</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={4000} className="text-xs text-gray-200">

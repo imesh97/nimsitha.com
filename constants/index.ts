@@ -171,7 +171,7 @@ export const EXPERIENCES: Experience[] = [
     location: "Remote",
     achievements: [
       "Led development of AI-powered CRM prototype for automotive dealerships, focusing on lead management and sales pipeline automation.",
-      "Built responsive Next.js landing page to showcase platform features, resulting in 50% increase in user engagement.",
+      "Built responsive Next.js landing page to showcase platform features, resulting in 100% increase in user engagement.",
       "Collaborated with key stakeholder to define technical requirements and architecture for specialized automotive CRM solution.",
       "Implemented core prototype features: lead scoring algorithms and customer journey mapping.",
     ],
@@ -192,18 +192,18 @@ export const EXPERIENCES: Experience[] = [
     site: "https://symptomstream.ca",
   },
   {
-    company: "ANVIROS Ventures Inc.",
+    company: "Rangara Creations",
     position: "Web Developer",
-    period: "Jan. 2022 — Jan. 2023",
+    period: "June 2023 — May 2024",
     location: "Brampton, CA",
     achievements: [
-      "Built commercial website for promoting Amazon products using WordPress: 200,000+ page hits.",
-      "Developed lead capture page for newsletter subscriptions using TypeScript, Next.js and Chakra UI.",
-      "Implemented API routes and serverless functions for subscription form emails, generating 25+ customer conversions.",
-      "Administered and configured cPanel server that hosts 10+ sites, improving disk usage by 70%.",
+      "Built commercial platform using Next.js, TypeScript, and Tailwind CSS, increasing user engagement by 200% and converting 10 new clients.",
+      "Implemented scalable database system using Supabase and Drizzle ORM, improving query performance by 30% and reducing server costs by 20%.",
+      "Designed responsive admin interface for user, class and media management, increasing task efficiency by 75% for staff.",
+      "Developed media uploading system with role-based access control, enabling 3x more uploads and 30% faster content deployment.",
     ],
-    logo: "/assets/logo_anviros.png",
-    site: "http://anviroscreations.com",
+    logo: "/assets/logo_rangara.png",
+    site: "http://rangaracreations.com",
   },
 ];
 
