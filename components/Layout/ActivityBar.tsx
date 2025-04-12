@@ -19,7 +19,7 @@ export default function ActivityBar() {
 
   useEffect(() => {
     if (isMobile) closeSidebar();
-  }, [isMobile, setIsMobile]);
+  }, [isMobile, setIsMobile, closeSidebar]);
 
   return (
     <div className="w-12 bg-grey-l flex flex-col flex-none items-center py-4 space-y-6">

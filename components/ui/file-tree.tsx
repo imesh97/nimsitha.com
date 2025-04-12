@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 "use client";
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";

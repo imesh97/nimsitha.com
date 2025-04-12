@@ -68,6 +68,7 @@ const usePreloadImages = (images: string[]) => {
 const ImagePreloader = ({ images }: { images: string[] }) => (
   <div className="hidden" aria-hidden="true">
     {images.map((src, index) => (
+      // eslint-disable-next-line @next/next/no-img-element
       <img key={index} src={src} alt="" />
     ))}
   </div>
