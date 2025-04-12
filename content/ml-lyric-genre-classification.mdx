@@ -1,0 +1,313 @@
+---
+
+title: Machine Learning for Lyric-based Genre Classification
+description: A detailed explanation of using three different machine learning approaches to classify song lyrics by genre.
+tags:
+  [
+    computer science,
+    machine learning,
+    natural language processing,
+    music,
+  ]
+
+---
+
+✏️ Article written for [**TuneType**](https://github.com/imesh97/tunetype).
+
+---
+
+I'm used to seeing music genre classification rely heavily on the <i>audio</i> features of a song. What if we could determine a song's <i>genre</i> just by analyzing its <i>lyrics</i> instead? This is what my team and I explored in our research project, <i><b>TuneType</b></i>. 
+
+Our research focused on distinguishing between <i>Pop</i> and <i>Rap/Hip-Hop</i> lyrics using <i>three</i> different machine learning approaches. The results were impressive! We achieved up to <i>86.69% accuracy</i> using only <i>textual</i> features (lyrics).
+
+I'll walk you through our approach and explain our thinking behind each method, showing you how to implement <i>your own</i> lyric-based genre classifier.
+
+## 🧩 so, why classify lyrics by genre?
+
+Well, lyrics contain <i>distinctive patterns</i> in vocabulary, themes and language structures. These patterns can serve as powerful <i>discriminative features</i> for genre classification. Furthermore, there are <i>several</i> advantages to analyzing lyrics over audio:
+
+- It requires a lot less computational <i>resources</i> and code <i>complexity</i>.
+- It functions <i>independently</i> of audio quality (bye, bye sample rates!)
+- It can reveal <i>thematic</i> and <i>cultural patterns</i> that are not captured by audio features.
+
+## 🧠 the AI behind classification
+
+For our research, we used <i>three</i> fundamental text classification approaches in machine learning. Coincidentally, each approach represents a different <i>era</i> and <i>philosophy</i> in the evolution of AI for <i>natural language processing</i> (NLP):
+
+### 1. Multinomial Naive Bayes (MNB)
+
+<b>MNB</b> is a <i>probabilistic</i> approach that is based on <i>Bayes' theorem</i>. It is a foundational concept in <i>statistical AI</i> that dates back to the <i>18th century</i>. <b>MNB</b> works by calculating the <i>probability</i> of a document belonging to a particular <i>class</i> given its <i>features</i> (words).
+
+In the context of <i>song lyrics</i>, <b>MNB</b> asks: "Given the presence of certain words, what's the probability this song is in the class `Pop` or `Rap/Hip-Hop`?"
+
+The "<i>naive</i>" part comes from its <i>assumption</i> that features are <i>conditionally independent</i> given the class. In reality, words in lyrics are clearly <i>dependent</i> on the <i>surrounding words</i>. However, this simplification makes computation feasible and, surprisingly, works well in practice, which is why it was chosen as the first approach. 
+
+MNB works well with <i>categorical data</i> (words that represent non-numerical categories or labels) and <i>sparse feature vectors</i> (words that occur rarely in a collection). Both are typical in text analysis. This makes the approach particularly suitable for <i>bag-of-words</i> (BoW) representations. In BoW, we only (really) care about the <i>frequency</i> of each word in the collection. This mathematical simplicity requires <i>a lot</i> less computational resources, thus allowing for efficient <i>scalability</i>, even with <i>large</i> vocabularies.
+
+### 2. Support Vector Machines (SVM)
+
+<b>SVMs</b>, developed in the <i>1990s</i>, represent a shift from probabilistic to <i>geometric thinking</i> in AI. This approach sees classification as a geometry problem in high-dimensional space.
+
+For our lyric classifier, the <b>SVM</b>:
+
+- Maps each song's lyrics to a <i>point</i> in a high-dimensional <i>space</i> (where each dimension corresponds to a word or phrase).
+- Searches for the <i>optimal hyperplane</i> (best line) that maximizes the <i>margin</i> (differentiation) between `Pop` and `Rap/Hip-Hop` lyrics. This is the <i>decision boundary</i>.
+- Uses the "<i>kernel trick</i>" to handle the <i>high dimensionality</i> (and vast amounts) of text data.
+
+In comparison, <b>MNB</b> focuses on the <i>probability</i> of features (words) showing up in different types of songs. <b>SVMs</b> model the <i>decision boundary</i> between classes. They (simply) try to draw a line between song types. This works better when you have <i>a lot</i> of songs or lyric collections to work with.
+
+This approach works well with <i>TF-IDF</i> representations. It not only counts words, but also captures the special words (<i>relative importance</i>) in documents. This optimization makes them robust to <i>overfitting</i>. It helps the model not get <i>obsessed</i> with the <i>training examples</i>, or get <i>confused</i> by <i>too many</i> words, which happens a lot when working with song lyrics (high-dimensional <i>feature spaces</i>).
+
+### 3. Bidirectional Encoder Representations from Transformers (BERT)
+
+<b>BERT</b> is the current <i>state-of-the-art</i> in NLP, and marks the emerging use of <i>contextual language models</i>. The model was developed by Google in 2018. It introduces several <i>paradigm shifts</i> in how AI processes language:
+- <i><b>Contextual Understanding:</b></i> In comparison, <b>MNB</b> and <b>SVM</b> treat words as <i>independent tokens</i>. <b>BERT</b> captures the <i>full context</i> in which words appear.
+	- For example, the word `sick` could be negative (illness) or positive (excellence) depending on the <i>context</i>. <b>BERT</b> can make this distinction.
+- <i><b>Bidirectional Architecture:</b></i> Text is processed in <i>both</i> directions simultaneously. <b>BERT</b> understands the <i>relationship</i> between words, regardless of their order in the sentence. This allows it to better understand <i>complex language patterns</i> like idioms, slang, and cultural references that are commonly found in lyrics.
+- <i><b>Transfer Learning:</b></i> The model is <i>pre-trained</i> on large text corpora (books, Wikipedia pages, etc.) to learn general language understanding. Then, it can be <i>fine-tuned</i> on specific tasks, like our genre classification. This allows it to still use <i>broad linguistic knowledge</i>, even when our specific training data is <i>limited</i> or not as vast.
+- <i><b>Attention Mechanism:</b></i> Uses <i>self-attention</i> to weigh the <i>importance</i> of different words when interpreting other ones. This mimics how humans focus on <i>relevant parts</i> of sentences to derive meaning, and effectively captures the <i>long-range dependencies</i> (connections between words that appear <i>far apart</i> but remain <i>semantically linked</i>). To read more about <i>attention mechanisms</i>, click [here](https://www.nimsitha.com/blog/attention-mechanisms).
+
+This <i>transformer</i> architecture represents a shift away from sequential processing of text (like in earlier recurrent neural networks) to <i>parallel processing</i>, that also captures <i>long-range dependencies</i>. 
+
+For our implementation, we used <i>Google Colab</i> and its paid <i>compute credits</i> to handle the computational demands for fine-tuning. This allowed us to train the model in a <i>reasonable timeframe</i> without investing in our own dedicated hardware.
+
+## 📈 the evolution of approaches
+
+These three approaches are akin to a <i>spectrum</i> in the evolution of NLP:
+
+1. <b>MNB:</b> A <i>probabilistic</i> classifier based on Bayes' theorem. Simple, <i>interpretable</i>, and efficient, but still makes strong <i>simplifying assumptions</i>.
+2. <b>SVM:</b> A <i>geometric</i> approach to find optimal hyperplanes. More <i>complex</i> math, better handling of word <i>importance</i>, but still treats text as <i>bags</i> of features.
+3. <b>BERT:</b> Complex <i>neural network</i> architecture. Processes in <i>parallel</i>, understands <i>context</i> and <i>semantics</i>, but still requires <i>a lot</i> of computational <i>resources</i>.
+
+Each step <i>improves</i> how the <i>nuances</i> of language are captured, but with <i>increasing</i> computational <i>cost</i>. 
+
+The <i>beauty</i> of our approach is that we can <i>quantify</i> and see exactly what this increased complexity buys us. <i><b>Our results:</b></i> a jump from <i>76%</i> accuracy with <b>MNB</b> to a balanced <i>81.85%</i> accuracy with <b>SVM</b>, to an impressive <i>86.69%</i> accuracy with <b>BERT</b>.
+
+## 📌 the implementation
+
+I'll walk you through how to implement <i>each</i> approach, <i>step by step</i>.
+### <u>STEP 1: Data Preparation</u>
+
+First, you'll need a <i>dataset</i> of song lyrics, labeled by <i>genre</i>. For our project, we used a dataset with <i>thousands</i> of `Pop` and `Rap/Hip-Hop` lyrics, which can be found [here]().
+
+```python
+# load and preprocess data
+def load_dataset(csv_path, is_test=False):
+    df = pd.read_csv(csv_path)
+    
+    if is_test:
+        if 'lyric' not in df.columns:
+            raise ValueError("CSV file must contain a 'lyric' column")
+        df.dropna(subset=['lyric'], inplace=True)
+        texts = df['lyric'].tolist()
+        return texts, None
+    
+    if 'lyric' not in df.columns or 'class' not in df.columns:
+        raise ValueError("CSV file must contain 'lyric' and 'class' columns")
+    df.dropna(subset=['lyric', 'class'], inplace=True)
+    
+    texts = df['lyric'].tolist()
+    labels = df['class'].tolist()
+    return texts, labels
+
+# clean text
+def clean_text(text):
+    if isinstance(text, str):
+        text = re.sub(r'[^\w\s]', ' ', text.lower())
+        text = re.sub(r'\s+', ' ', text).strip()
+        return text
+    return ""
+```
+
+<b>Concept:</b> Text <i>preprocessing</i> is crucial in NLP because it reduces <i>noise</i> (unwanted/irrelevant information in text) and standardizes the <i>input</i>. This allows models to focus on <i>meaningful</i> patterns rather than <i>variations</i> in spelling, formatting or capitalization.
+
+### <u>STEP 2: Feature Extraction</u>
+
+Each model requires different <i>feature extraction</i> methods that represent text in formats that the algorithms can process.
+
+#### 2.1. Multinomial Naive Bayes
+
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+
+# create pipeline with CountVectorizer and MultinomialNB
+pipeline = Pipeline([
+    ('vectorizer', CountVectorizer(stop_words='english', ngram_range=(1, 1))),
+    ('classifier', MultinomialNB())
+])
+```
+
+<b>Note:</b> The <i>CountVectorizer</i> transforms text into a "<i>bag of words</i>" representation. A <i>sparse matrix</i> is created, where each column represents a word in the vocabulary, and each cell contains the <i>count</i> of that word in a document. We use `stop_words='english'` to remove common English words that don't carry much <i>genre-specific</i> information. The `ngram_range=(1, 1)` parameter specifies that we only want to consider <i>individual</i> words (unigrams).
+
+#### 2.2. Support Vector Machine
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# vectorize with TF-IDF
+vectorizer = TfidfVectorizer(stop_words='english', min_df=2, max_df=0.95, ngram_range=(1, 3))
+X_train_tfidf = vectorizer.fit_transform(X_train)
+```
+
+<b>Note:</b> <i>TF-IDF</i> (Term Frequency-Inverse Document Frequency) is a more <i>sophisticated</i> representation that weights words based on how <i>important</i> they are to a document relative to the entire corpus. Unlike simple counts, TF-IDF <i>increases</i> with word <i>frequency</i> in a document, but <i>decreases</i> if the word is common across <i>all</i> documents.
+
+The parameters were carefully chosen:
+
+- `min_df=2`: Ignore terms that appear in fewer than 2 documents, reducing <i>noise</i> from <i>rare</i> words.
+- `max_df=0.95`: Ignore terms that appear in more than 95% of documents, as they're likely not <i>distinctive</i>.
+- `ngram_range=(1, 3)`: Consider not just <i>individual</i> words, but also <i>sequences</i> of 2-3 words (bigrams, trigrams). 
+	- For example, this captures <i>phrases</i> like "my heart" that might be characteristic of `Pop` lyrics.
+
+#### 2.3. BERT
+
+```python
+from transformers import AutoTokenizer, TFAutoModelForSequenceClassification
+
+# load tokenizer
+tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
+
+# tokenize text
+encodings = tokenizer(texts, truncation=True, padding=True, max_length=128, return_tensors='tf')
+```
+
+<b>Note:</b> The model uses <i>contextual word embeddings</i> rather than bag-of-words or TF-IDF. Unlike earlier methods that treat each word <i>independently</i>, this approach understands words in <i>context</i> and can capture <i>semantic relationships</i>. The tokenizer breaks text into <i>tokens</i> (including subwords) and converts them to IDs that can be understood by the model. We use `truncation=True` and `max_length=128` because transformer models have a <i>fixed input size limit</i>, and `padding=True` ensures all sequences have the same length.
+
+### <u>STEP 3: Model Training</u>
+
+Now, let's train each model!
+
+#### 3.1. Multinomial Naive Bayes
+
+```python
+# train MNB
+pipeline.fit(train_texts, train_labels)
+```
+
+<b>Note:</b> The model works by calculating the <i>probability</i> of a document belonging to each <i>class</i> based on the probabilities of its constituent words. It's "<i>naive</i>" because it assumes words are <i>conditionally independent</i> given the class, which isn't true in natural language but works surprisingly well in practice.
+
+#### 3.2. Support Vector Machine
+
+```python
+from sklearn.svm import LinearSVC
+
+# initialize and train SVM
+svm = LinearSVC(C=5.0, class_weight='balanced')
+svm.fit(X_train_tfidf, y_train)
+```
+
+<b>Note:</b> The model find an <i>optimal hyperplane</i> that maximizes the <i>margin</i> between classes in the feature space. The `C=5.0` parameter controls the trade-off between maximizing the <i>decision boundary</i> margin and minimizing classification error.  We used a higher `C` value to place more emphasis on correctly classifying <i>training examples</i>, potentially at the cost of a narrower margin. The `class_weight='balanced'` parameter adjusts weights to account for class <i>imbalance</i>, ensuring the model doesn't favour the majority class.
+
+#### 3.3. BERT
+
+```python
+# load pre-trained model and add classification layer
+model = TFAutoModelForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
+
+# compile model
+optimizer = tf.keras.optimizers.Adam(learning_rate=5e-5)
+loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+model.compile(optimizer=optimizer, loss=loss, metrics=['accuracy'])
+
+# create dataset
+train_dataset = tf.data.Dataset.from_tensor_slices((dict(train_encodings), train_labels)).batch(16)
+
+# fine-tune BERT
+history = model.fit(train_dataset, epochs=3)
+```
+
+<b>Note:</b> The model uses <i>transfer learning</i>, where it is <i>pre-trained</i> on a large corpus of text, and then <i>fine-tuned</i> on a specific task. We use a small learning rate (`5e-5`) to avoid <i>catastrophic forgetting</i> (the loss of previous knowledge that is acquired during pre-training). The batch size (16) is kept <i>small</i> due to memory requirements. We use only <i>3 epochs</i> as fine-tuning typically converges quickly.
+
+### <u>STEP 4: Evaluation</u>
+
+After training, we evaluate the models on a <i>validation set</i>.
+
+```python
+# make predictions
+y_pred = model.predict(X_val)
+
+# calculate metrics
+accuracy = accuracy_score(y_val, y_pred)
+conf_matrix = confusion_matrix(y_val, y_pred)
+report = classification_report(y_val, y_pred)
+
+print(f"Accuracy: {accuracy:.4f}")
+print("Classification Report:")
+print(report)
+```
+
+<b>Note:</b> We use <i>multiple</i> evaluation metrics because accuracy alone can be misleading, especially with <i>imbalanced classes</i>. The confusion matrix shows false positives and false negatives, while precision, recall, and F1-score in the classification report give a more <i>complete picture</i> of model performance for each class.
+
+### <u>STEP 5: Analysis of Feature Importance</u> 
+
+Understanding which features (words or phrases) are most <i>important</i> for classification provides us with some <i>valuable insights</i>.
+
+```python
+# for SVM, examine coefficient values
+feature_names = vectorizer.get_feature_names_out()
+coefficients = svm.coef_[0]
+
+# get top features for Pop (positive coefficients)
+pop_indices = np.argsort(coefficients)[-15:][::-1]
+pop_features = [feature_names[i] for i in pop_indices]
+pop_coeffs = [coefficients[i] for i in pop_indices]
+
+# get top features for Rap/Hip-Hop (negative coefficients)
+rap_indices = np.argsort(coefficients)[:15]
+rap_features = [feature_names[i] for i in rap_indices]
+rap_coeffs = [coefficients[i] for i in rap_indices]
+
+# visualize data
+plt.figure(figsize=(10, 8))
+plt.barh(range(len(pop_features)), pop_coeffs, align='center', color='lightcoral')
+plt.yticks(range(len(pop_features)), pop_features)
+plt.xlabel('Coefficient Value')
+plt.title('Top 15 Features for Pop')
+plt.show()
+```
+
+<b>Note:</b> Linear models like SVM assign <i>weights</i> (coefficients) to features that indicate their <i>importance</i> in classification. Positive coefficients push the model toward the `Pop` class, while negative coefficients push toward the `Rap/Hip-Hop` class. By analyzing these coefficients, we gain <i>interpretability</i> that deep learning models like BERT often lack.
+
+## 📊 results and insights
+
+We had some <i>interesting</i> findings from our experiments.
+
+### Classification Performance
+
+- <b>MNB:</b> <i>76.00%</i> accuracy
+- <b>SVM:</b> <i>81.85%</i> accuracy
+- <b>BERT:</b> <i>86.69%</i> accuracy (highest performance)
+
+All models performed <i>significantly</i> better than random chance (50%), which confirms that lyrics <i>do</i> contain <i>strong signals</i> for genre classification.
+
+### Genre-Distinctive Features
+
+Our <b>SVM</b> model revealed <i>distinctive</i> vocabulary patterns:
+
+- <b>Pop lyrics</b> featured terms related to love, emotions, and relationships ("heart," "love," "baby").
+- <b>Rap/Hip-Hop lyrics</b> contained more slang terms, specific pronouns, and cultural references.
+
+This aligns with <i>genre conventions</i> and <i>cultural differences</i>, which, ultimately, validates our approach.
+
+### Performance vs. Complexity Trade-off
+
+An important consideration in AI is the <i>balance</i> between model <i>performance</i> and computational <i>requirements</i>:
+
+- <b>MNB:</b> Training in seconds, <i>minimal</i> memory --> lowest accuracy
+- <b>SVM:</b> Training in minutes, <i>moderate</i> memory --> balanced accuracy
+- <b>BERT:</b> Training in hours (requires GPU), <i>substantial</i> memory --> highest accuracy
+
+This presents a classic trade-off in AI. While <b>BERT</b> achieves the highest accuracy, the <i>computational cost</i> might be restrictive for some applications. The <b>SVM</b> model offers an excellent <i>balance</i> with strong performance and <i>reasonable</i> resource requirements.
+
+## ✅ conclusion
+
+To sum it up, our project showed that genre classification of lyrics can be performed with <i>high accuracy</i> using machine learning techniques. We progressed from simple <i>statistical</i> methods (<b>MNB</b>), to more <i>complex</i> representations (<b>SVM</b>), to <i>deep learning</i> (<b>BERT</b>). This ultimately shows how <i>different</i> approaches can be applied to the <i>same</i> problem with <i>increasing</i> levels of complexity.
+
+The <i>differences</i> we found between `Pop` and `Rap/Hip-Hop` lyrics are a <i>reflection</i> of the <i>patterns</i> found in the themes, vocabulary, and cultural <i>contexts</i> of those genres. Furthermore, this approach can be extended to other genres, or even sub-genres for more <i>fine-grained</i> classification.
+
+<i><b>tl;dr:</b></i> If you want to implement your own lyric-based genre classifier, then consider starting with <b>SVM</b>. It provides a <i>balance</i> between performance and efficiency, along with <i>interpretability</i> for valuable insights. For the best results, <b>BERT</b> is the way to go (but be prepared to use Google Colab).
+
+---
+
+If you want to learn more about our full implementation, check out the project [repository](https://github.com/imesh97/tunetype). 
+
+You can also read our research report [here](https://github.com/imesh97/tunetype/blob/main/report.pdf).
