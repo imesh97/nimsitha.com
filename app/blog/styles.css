@@ -21,6 +21,12 @@ body {
   overflow-y: hidden;
 }
 
+#blog-content u {
+  color: var(--color-green-500);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
 .nextra-tag {
   background-color: var(--color-grey-l);
   color: var(--color-gray-300);
