@@ -26,18 +26,18 @@ const NETWORKING_BUTTONS = [
 export function HeroSection() {
   return (
     <div className="relative flex items-center">
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-1 sm:py-12 lg:py-12 xl:py-16 2xl:py-20">
+      <div className="relative z-10 w-full max-w-max sm:max-w-6xl sm:mx-auto px-0 sm:px-6 py-1 sm:py-12 lg:py-12 xl:py-16 2xl:py-20">
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           <div className="lg:col-span-3">
             <div className="space-y-3 md:space-y-5">
-              <h1 className="text-6xl font-bold bg-linear-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent tracking-wide">
-                imesh nimsitha
+              <h1 className="text-5xl sm:text-6xl font-bold bg-linear-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent tracking-wide">
+                imesh <br className="inline sm:hidden" />nimsitha
               </h1>
               <h2 className="text-2xl text-gray-300 tracking-wide font-medium">
                 digital creator & <br className="inline sm:hidden" />
                 software developer
               </h2>
-              <p className="text-gray-400 text-xl font-light leading-relaxed md:leading-[1.75] max-w-md">
+              <p className="text-gray-400 text-lg sm:text-xl font-light leading-relaxed md:leading-[1.75] max-w-xs sm:max-w-md">
                 I like building modern web applications and creating cool stuff
                 on my computer. And yes, this <i>does</i> look like a code
                 editor you might&apos;ve used before... Anyway, feel free to

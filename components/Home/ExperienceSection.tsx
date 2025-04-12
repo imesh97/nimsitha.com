@@ -25,9 +25,9 @@ function AchievementAccordion({ achievements }: { achievements: string[] }) {
             setIsAchievementsOpen((isAchievementsOpen) => !isAchievementsOpen)
           }
         >
-          <div className="inline-flex transition-all">
+          <div className="text-left inline-flex transition-all">
             <CornerDownRight className="mr-2 h-6 w-6 text-blue-400" />
-            view my responsibilities / achievements
+            view my responsibilities<span className="hidden sm:inline"> / achievements</span>
             {isAchievementsOpen ? ":" : ""}
           </div>
         </AccordionTrigger>
@@ -52,8 +52,8 @@ function AchievementAccordion({ achievements }: { achievements: string[] }) {
 export function ExperienceSection() {
   return (
     <div className="py-12 bg-[#1E1E1E]">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-gray-200 tracking-wide">
+      <div className="max-w-xs sm:max-w-6xl sm:mx-auto px-0 sm:px-6">
+        <h2 className="text-3xl font-bold mb-8 sm:mb-12 text-gray-200 tracking-wide">
           my work experience:
         </h2>
 
@@ -95,7 +95,7 @@ export function ExperienceSection() {
                       </div>
                     </div>
 
-                    <div className="text-base font-base font-content text-gray-400 text-right w-full md:w-auto flex flex-row md:flex-col mt-4 md:mt-0">
+                    <div className="text-base font-base font-content text-gray-400 text-left sm:text-right w-full md:w-auto flex flex-row md:flex-col mt-4 md:mt-0">
                       <div className="flex items-center justify-end mr-4 md:mr-0 mb-0 md:mb-3">
                         <Calendar
                           className="w-4 h-4 mr-1 sm:mr-2"
@@ -103,7 +103,7 @@ export function ExperienceSection() {
                         />
                         {exp.period}
                       </div>
-                      <div className="flex items-center justify-end">
+                      <div className="hidden sm:flex items-center justify-end">
                         <MapPin
                           className="w-4 h-4 mr-1 sm:mr-2"
                           strokeWidth={1.75}

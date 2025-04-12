@@ -5,24 +5,31 @@ import { File, Folder, Tree } from "@/components/ui/file-tree";
 import { NAVIGATION } from "@/constants";
 import { FolderOpenIcon, Folder as FolderIcon } from "lucide-react";
 import { FileIcon } from "@/components/Layout/FileIcon";
+import { useLayoutStore } from "@/store/layoutStore";
 
 export function FileTree() {
   const router = useRouter();
+  const {closeSidebar} = useLayoutStore();
+
+  const goTo = (path: string) => {
+    router.push(path);
+    closeSidebar();
+  };
 
   const handleSelect = (id: string) => {
     console.log("Selected:", id);
     switch (id) {
       case "home.tsx":
-        router.push("/");
+        goTo("/");
         break;
       case "skills.json":
-        router.push("/skills");
+        goTo("/skills");
         break;
       case "projects/overview.tsx":
-        router.push("/projects");
+        goTo("/projects");
         break;
       case "blog.md":
-        router.push("/blog");
+        goTo("/blog");
         break;
       default:
         break;

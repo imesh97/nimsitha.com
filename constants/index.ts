@@ -371,22 +371,22 @@ export const SKILLS = [
   },
   {
     name: "Visual Studio Code",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/color/48/visual-studio-code-2019.png",
   },
   {
     name: "Eclipse",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/office/40/java-eclipse.png",
   },
   {
     name: "IntelliJ IDEA",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/color/48/intellij-idea.png",
   },
   {
     name: "Linux",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/color/48/linux--v1.png",
   },
   {
@@ -411,32 +411,32 @@ export const SKILLS = [
   },
   {
     name: "WordPress",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/fluency/144/wordpress.png",
   },
   {
     name: "Confluence",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/fluency/144/confluence.png",
   },
   {
     name: "Slack",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/color/48/slack.png",
   },
   {
     name: "Trello",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/color/48/trello.png",
   },
   {
     name: "Figma",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/fluency/144/figma.png",
   },
   {
     name: "UML",
-    category: "Programs / Tools",
+    category: "Tools",
     img: "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/external-flow-interface-kiranshastry-lineal-color-kiranshastry.png",
   },
   {

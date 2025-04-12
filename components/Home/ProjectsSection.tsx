@@ -8,10 +8,10 @@ import { cn } from "@/lib/utils";
 export function ProjectsSection() {
   return (
     <div className="py-12 bg-[#1E1E1E]">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-xs sm:max-w-6xl sm:mx-auto px-0 sm:px-6">
         <div className="relative flex flex-row mb-10 gap-4">
           <h2 className="text-3xl font-semibold text-gray-200 tracking-wide">
-            i like working on projects.
+            i like working <br className="inline sm:hidden"/>on projects.
           </h2>
           <Link
             href="/projects"

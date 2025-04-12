@@ -7,7 +7,7 @@ export default function SkillsTab({ skills }: { skills: Skill[] }) {
 
   return (
     <Tabs defaultValue={categories[0]} className="bg-grey-d pb-8 rounded-lg">
-      <TabsList className="mb-4 w-full bg-grey-d rounded-none">
+      <TabsList className="grid grid-cols-3 sm:flex mb-16 sm:mb-4 w-full bg-grey-d rounded-none justify-start">
         {categories.map((category) => (
           <TabsTrigger
             key={`trigger-${category}`}
@@ -20,7 +20,7 @@ export default function SkillsTab({ skills }: { skills: Skill[] }) {
       </TabsList>
       {categories.map((category) => (
         <TabsContent key={`tab-${category}`} value={category}>
-          <div className="flex gap-x-4 gap-y-0 flex-wrap px-4">
+          <div className="flex gap-x-2 sm:gap-x-4 gap-y-0 flex-wrap sm:px-4">
             {skills
               .filter((skill) => skill.category === category)
               .map((skill, index) => (
