@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Afacad_Flux, Fira_Code, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import CodeLayout from "@/components/Layout/CodeLayout";
+import { Analytics } from "@vercel/analytics/react"
 
 const fontCode = Fira_Code({
   variable: "--font-main",
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={`${fontContent.variable} ${fontContent2.variable} ${fontCode.variable} antialiased scroll-smooth`}
       >
         <CodeLayout>{children}</CodeLayout>
+        <Analytics />
       </body>
     </html>
   );
