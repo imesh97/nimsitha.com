@@ -9,11 +9,11 @@ import { useLayoutStore } from "@/store/layoutStore";
 
 export function FileTree() {
   const router = useRouter();
-  const {closeSidebar} = useLayoutStore();
+  const { closeSidebar, isMobile } = useLayoutStore();
 
   const goTo = (path: string) => {
     router.push(path);
-    closeSidebar();
+    if (isMobile) closeSidebar();
   };
 
   const handleSelect = (id: string) => {
