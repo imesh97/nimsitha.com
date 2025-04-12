@@ -26,7 +26,7 @@ const NETWORKING_BUTTONS = [
 export function HeroSection() {
   return (
     <div className="relative flex items-center">
-      <div className="relative z-10 w-full max-w-max sm:max-w-6xl sm:mx-auto px-0 sm:px-6 py-1 sm:py-12 lg:py-12 xl:py-16 2xl:py-20">
+      <div className="relative z-10 w-full max-[24rem]:max-w-[16rem] max-[25rem]:max-w-[18rem] max-[27rem]:max-w-[23rem] sm:max-w-6xl sm:mx-auto px-0 sm:px-6 py-1 sm:py-12 lg:py-12 xl:py-16 2xl:py-20">
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           <div className="lg:col-span-3">
             <div className="space-y-3 md:space-y-5">

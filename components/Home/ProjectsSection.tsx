@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export function ProjectsSection() {
   return (
     <div className="py-12 bg-[#1E1E1E]">
-      <div className="max-w-xs sm:max-w-6xl sm:mx-auto px-0 sm:px-6">
+      <div className="max-[24rem]:max-w-[16rem] max-[25rem]:max-w-[18rem] max-[27rem]:max-w-[23rem] sm:max-w-6xl sm:mx-auto px-0 sm:px-6">
         <div className="relative flex flex-row mb-10 gap-4">
           <h2 className="text-3xl font-semibold text-gray-200 tracking-wide">
             i like working <br className="inline sm:hidden"/>on projects.
