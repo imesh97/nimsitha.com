@@ -16,11 +16,11 @@ tags:
 
 ---
 
-I'm used to seeing music genre classification rely heavily on the <i>audio</i> features of a song. What if we could determine a song's <i>genre</i> just by analyzing its <i>lyrics</i> instead? This is what my team and I explored in our research project, <i><b>TuneType</b></i>. 
+I'm used to seeing music genre classification rely heavily on the <i>audio</i> features of a song. What if we could determine a song's <i>genre</i> just by analyzing its <i>lyrics</i> instead? This is what my team and I explored in our research project, <b>TuneType</b>. 
 
-Our research focused on distinguishing between <i>Pop</i> and <i>Rap/Hip-Hop</i> lyrics using <i>three</i> different machine learning approaches. The results were impressive! We achieved up to <i>86.69% accuracy</i> using only <i>textual</i> features (lyrics).
+Our research focused on distinguishing between <i>Pop</i> and <i>Rap/Hip-Hop</i> lyrics using <i>three</i> different machine learning approaches. The results were impressive! We achieved up to `86.69%` accuracy using only <i>textual</i> features (lyrics).
 
-I'll walk you through our approach and explain our thinking behind each method, showing you how to implement <i>your own</i> lyric-based genre classifier.
+I'll walk you through our approach and explain our thinking behind each method. I'll show you how to implement <i>your own</i> <b>lyric-based genre classifier</b>.
 
 ## 🧩 so, why classify lyrics by genre?
 
@@ -29,6 +29,8 @@ Well, lyrics contain <i>distinctive patterns</i> in vocabulary, themes and langu
 - It requires a lot less computational <i>resources</i> and code <i>complexity</i>.
 - It functions <i>independently</i> of audio quality (bye, bye sample rates!)
 - It can reveal <i>thematic</i> and <i>cultural patterns</i> that are not captured by audio features.
+
+---
 
 ## 🧠 the AI behind classification
 
@@ -44,9 +46,9 @@ The "<i>naive</i>" part comes from its <i>assumption</i> that features are <i>co
 
 MNB works well with <i>categorical data</i> (words that represent non-numerical categories or labels) and <i>sparse feature vectors</i> (words that occur rarely in a collection). Both are typical in text analysis. This makes the approach particularly suitable for <i>bag-of-words</i> (BoW) representations. In BoW, we only (really) care about the <i>frequency</i> of each word in the collection. This mathematical simplicity requires <i>a lot</i> less computational resources, thus allowing for efficient <i>scalability</i>, even with <i>large</i> vocabularies.
 
-### 2. Support Vector Machines (SVM)
+### 2. Support Vector Machine (SVM)
 
-<b>SVMs</b>, developed in the <i>1990s</i>, represent a shift from probabilistic to <i>geometric thinking</i> in AI. This approach sees classification as a geometry problem in high-dimensional space.
+<b>SVM</b>, which was developed in the <i>1990s</i>, represents a shift from probabilistic to <i>geometric thinking</i> in AI. This approach views classification as a geometry problem in high-dimensional space.
 
 For our lyric classifier, the <b>SVM</b>:
 
@@ -69,23 +71,37 @@ This approach works well with <i>TF-IDF</i> representations. It not only counts 
 
 This <i>transformer</i> architecture represents a shift away from sequential processing of text (like in earlier recurrent neural networks) to <i>parallel processing</i>, that also captures <i>long-range dependencies</i>. 
 
-For our implementation, we used <i>Google Colab</i> and its paid <i>compute credits</i> to handle the computational demands for fine-tuning. This allowed us to train the model in a <i>reasonable timeframe</i> without investing in our own dedicated hardware.
+For our implementation, we used <i>Google Colab</i> and its paid <i>compute credits</i> to handle the resource demands for fine-tuning. This allowed us to train the model in a <i>reasonable timeframe</i> without investing in our own dedicated hardware (GPUs).
 
 ## 📈 the evolution of approaches
 
-These three approaches are akin to a <i>spectrum</i> in the evolution of NLP:
+These three approaches create a <i>spectrum</i> in the evolution of NLP:
 
 1. <b>MNB:</b> A <i>probabilistic</i> classifier based on Bayes' theorem. Simple, <i>interpretable</i>, and efficient, but still makes strong <i>simplifying assumptions</i>.
 2. <b>SVM:</b> A <i>geometric</i> approach to find optimal hyperplanes. More <i>complex</i> math, better handling of word <i>importance</i>, but still treats text as <i>bags</i> of features.
 3. <b>BERT:</b> Complex <i>neural network</i> architecture. Processes in <i>parallel</i>, understands <i>context</i> and <i>semantics</i>, but still requires <i>a lot</i> of computational <i>resources</i>.
 
-Each step <i>improves</i> how the <i>nuances</i> of language are captured, but with <i>increasing</i> computational <i>cost</i>. 
+Each step <i>improves</i> with how it captures the <i>nuances</i> of language, but with <i>increasing</i> computational <i>cost</i> and <i>complexity</i>. 
 
-The <i>beauty</i> of our approach is that we can <i>quantify</i> and see exactly what this increased complexity buys us. <i><b>Our results:</b></i> a jump from <i>76%</i> accuracy with <b>MNB</b> to a balanced <i>81.85%</i> accuracy with <b>SVM</b>, to an impressive <i>86.69%</i> accuracy with <b>BERT</b>.
+The <i>beauty</i> of our approach is that we can <i>quantify</i> and see exactly what this increased complexity buys us. <i><b>Our results:</b></i> a jump from `76%` accuracy with <b>MNB</b> to a balanced `81.85%` accuracy with <b>SVM</b>, to an impressive `86.69%` accuracy with <b>BERT</b>.
+
+---
 
 ## 📌 the implementation
 
 I'll walk you through how to implement <i>each</i> approach, <i>step by step</i>.
+
+```python
+# import necessary libraries
+import pandas as pd
+import numpy as np
+import re
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+import tensorflow as tf
+```
+
 ### <u>STEP 1: Data Preparation</u>
 
 First, you'll need a <i>dataset</i> of song lyrics, labeled by <i>genre</i>. For our project, we used a dataset with <i>thousands</i> of `Pop` and `Rap/Hip-Hop` lyrics, which can be found [here]().
@@ -235,11 +251,11 @@ print("Classification Report:")
 print(report)
 ```
 
-<b>Note:</b> We use <i>multiple</i> evaluation metrics because accuracy alone can be misleading, especially with <i>imbalanced classes</i>. The confusion matrix shows false positives and false negatives, while precision, recall, and F1-score in the classification report give a more <i>complete picture</i> of model performance for each class.
+<b>Note:</b> We use <i>multiple</i> evaluation metrics because accuracy alone doesn't tell the full story, especially with <i>imbalanced classes</i>. The confusion matrix shows false positives and false negatives. Precision, recall, and F1-score give a more <i>complete picture</i> of model performance for each class.
 
 ### <u>STEP 5: Analysis of Feature Importance</u> 
 
-Understanding which features (words or phrases) are most <i>important</i> for classification provides us with some <i>valuable insights</i>.
+We should understand which features (words or phrases) are most <i>important</i> for classification, as it shows us some <i>valuable insights</i>.
 
 ```python
 # for SVM, examine coefficient values
@@ -267,17 +283,19 @@ plt.show()
 
 <b>Note:</b> Linear models like SVM assign <i>weights</i> (coefficients) to features that indicate their <i>importance</i> in classification. Positive coefficients push the model toward the `Pop` class, while negative coefficients push toward the `Rap/Hip-Hop` class. By analyzing these coefficients, we gain <i>interpretability</i> that deep learning models like BERT often lack.
 
+---
+
 ## 📊 results and insights
 
-We had some <i>interesting</i> findings from our experiments.
+We had some <i>interesting</i> findings from our experiments!
 
 ### Classification Performance
 
-- <b>MNB:</b> <i>76.00%</i> accuracy
-- <b>SVM:</b> <i>81.85%</i> accuracy
-- <b>BERT:</b> <i>86.69%</i> accuracy (highest performance)
+- <b>MNB:</b> `76.00%` accuracy
+- <b>SVM:</b> `81.85%` accuracy
+- <b>BERT:</b> `86.69%` accuracy (highest performance)
 
-All models performed <i>significantly</i> better than random chance (50%), which confirms that lyrics <i>do</i> contain <i>strong signals</i> for genre classification.
+All models performed <i>significantly</i> better than random chance (`50%`), which confirms that lyrics <i>do</i> contain <i>strong signals</i> for genre classification.
 
 ### Genre-Distinctive Features
 
@@ -292,11 +310,13 @@ This aligns with <i>genre conventions</i> and <i>cultural differences</i>, which
 
 An important consideration in AI is the <i>balance</i> between model <i>performance</i> and computational <i>requirements</i>:
 
-- <b>MNB:</b> Training in seconds, <i>minimal</i> memory --> lowest accuracy
-- <b>SVM:</b> Training in minutes, <i>moderate</i> memory --> balanced accuracy
-- <b>BERT:</b> Training in hours (requires GPU), <i>substantial</i> memory --> highest accuracy
+- <b>MNB:</b> Training in seconds, <i>minimal</i> memory ➡️ <i>Lowest</i> accuracy
+- <b>SVM:</b> Training in minutes, <i>moderate</i> memory ➡️ <i>Balanced</i> accuracy
+- <b>BERT:</b> Training in hours (requires GPU), <i>substantial</i> memory ➡️ <i>Highest</i> accuracy
 
 This presents a classic trade-off in AI. While <b>BERT</b> achieves the highest accuracy, the <i>computational cost</i> might be restrictive for some applications. The <b>SVM</b> model offers an excellent <i>balance</i> with strong performance and <i>reasonable</i> resource requirements.
+
+---
 
 ## ✅ conclusion
 
@@ -304,10 +324,10 @@ To sum it up, our project showed that genre classification of lyrics can be perf
 
 The <i>differences</i> we found between `Pop` and `Rap/Hip-Hop` lyrics are a <i>reflection</i> of the <i>patterns</i> found in the themes, vocabulary, and cultural <i>contexts</i> of those genres. Furthermore, this approach can be extended to other genres, or even sub-genres for more <i>fine-grained</i> classification.
 
-<i><b>tl;dr:</b></i> If you want to implement your own lyric-based genre classifier, then consider starting with <b>SVM</b>. It provides a <i>balance</i> between performance and efficiency, along with <i>interpretability</i> for valuable insights. For the best results, <b>BERT</b> is the way to go (but be prepared to use Google Colab).
+<i><b>tl;dr:</b></i> If you want to implement your own lyric-based genre classifier, then consider starting with <b>SVM</b>. It provides a <i>balance</i> between performance and efficiency, along with <i>interpretability</i> for valuable insights. For the best results, <b>BERT</b> is the way to go (be wary of your time 😅).
 
 ---
 
-If you want to learn more about our full implementation, check out the project [repository](https://github.com/imesh97/tunetype). 
+📁 If you want to learn more about our <i>full implementation</i>, check out the project [repository](https://github.com/imesh97/tunetype). 
 
-You can also read our research report [here](https://github.com/imesh97/tunetype/blob/main/report.pdf).
+📝 You can also read our <i>research report</i> [here](https://github.com/imesh97/tunetype/blob/main/report.pdf).

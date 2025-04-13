@@ -22,7 +22,7 @@ body {
 }
 
 #blog-content u {
-  color: var(--color-green-500);
+  color: var(--color-red-400);
   text-decoration: underline;
   text-underline-offset: 8px;
 }
