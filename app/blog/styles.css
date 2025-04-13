@@ -11,6 +11,24 @@
   background-color: transparent;
 }
 
+@media (width <= 40rem) {
+  .x\:container {
+    max-width: 28rem;
+  }
+}
+
+@media (width <= 32rem) {
+  .x\:container {
+    max-width: 20rem;
+  }
+}
+
+@media (width <= 24rem) {
+  .x\:container {
+    max-width: 16rem;
+  }
+}
+
 @media (width >= 64rem) {
   .x\:container {
     max-width: 64rem;
