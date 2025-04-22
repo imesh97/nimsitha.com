@@ -18,7 +18,9 @@ export function ExperienceTerminal() {
       </AnimatedSpan>
 
       <AnimatedSpan delay={3500} className="text-xs text-gray-200">
-        <span>→ Built high-traffic commercial platform and admin interface</span>
+        <span>
+          → Built high-traffic commercial platform and admin interface
+        </span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={4000} className="text-xs text-gray-200">
@@ -30,11 +32,11 @@ export function ExperienceTerminal() {
       </AnimatedSpan>
 
       <AnimatedSpan delay={5500} className="text-xs text-gray-200">
-        <span>→ Led AI-powered hospital triage system development</span>
+        <span>→ Led development of AI-powered patient management system</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={6000} className="text-xs text-gray-200">
-        <span>→ Drove project from concept to prototype</span>
+        <span>→ Drove startup from concept to prototype</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={7000} className="text-xs text-yellow-500">
@@ -46,7 +48,7 @@ export function ExperienceTerminal() {
       </AnimatedSpan>
 
       <AnimatedSpan delay={8000} className="text-xs text-gray-200">
-        <span>→ Implementing lead scoring and customer journey features</span>
+        <span>→ Implementing lead automation and customer journey mapping</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={9000} className="text-xs text-blue-400">
