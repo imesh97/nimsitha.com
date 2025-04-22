@@ -31,11 +31,12 @@ export function HeroSection() {
           <div className="lg:col-span-3">
             <div className="space-y-3 md:space-y-5">
               <h1 className="max-[22rem]:text-5xl text-6xl font-bold bg-linear-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent tracking-wide">
-                imesh <br className="inline min-[27rem]:hidden" />nimsitha
+                imesh <br className="inline min-[27rem]:hidden" />
+                nimsitha
               </h1>
               <h2 className="text-2xl text-gray-300 tracking-wide font-medium">
                 digital creator & <br className="inline min-[27rem]:hidden" />
-                software developer
+                software engineer
               </h2>
               <p className="text-gray-400 text-lg min-[27rem]:text-xl font-light leading-relaxed md:leading-[1.75] max-w-xs min-[27rem]:max-w-md">
                 I like building modern web applications and creating cool stuff
