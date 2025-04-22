@@ -98,13 +98,21 @@ export const PROJECTS = [
     demoUrl: "https://symptomstream.ca",
     demoUrlText: "live",
     githubUrl: "",
-  },{ 
+  },
+  {
     title: "nexusquiz - trivia game",
     description:
       "Real-time multiplayer with leader election, state replication and fault tolerance.",
     image: "/assets/projects/cover_nexusquiz.jpeg",
-    technologies: ["Next.js", "FastAPI", "WebSockets", "Socket.IO", "Raft Consensus"],
-    demoUrl: "https://drive.google.com/file/d/1ZJU_cDErc5cFRO5KBX-DtXh0k9jFPeNh/view?usp=sharing",
+    technologies: [
+      "Next.js",
+      "FastAPI",
+      "WebSockets",
+      "Socket.IO",
+      "Raft Consensus",
+    ],
+    demoUrl:
+      "https://drive.google.com/file/d/1ZJU_cDErc5cFRO5KBX-DtXh0k9jFPeNh/view?usp=sharing",
     githubUrl: "https://github.com/imesh97/nexusquiz",
   },
   {
@@ -122,7 +130,13 @@ export const PROJECTS = [
     description:
       "Using Multinomial Naive Bayes, Support Vector Machine, and fine-tuned BERT models.",
     image: "/assets/projects/cover_tunetype.jpeg",
-    technologies: ["Python", "TensorFlow", "Transformers", "Google BERT", "scikit-learn"],
+    technologies: [
+      "Python",
+      "TensorFlow",
+      "Transformers",
+      "Google BERT",
+      "scikit-learn",
+    ],
     demoUrl: "https://github.com/imesh97/tunetype/blob/main/report.pdf",
     githubUrl: "https://github.com/imesh97/tunetype",
     demoUrlText: "report",
@@ -135,7 +149,8 @@ export const PROJECTS = [
     technologies: ["Python", "Streamlit", "gRPC", "Redis", "AWS EC2", "Docker"],
     demoUrl: "http://ec2-3-144-116-12.us-east-2.compute.amazonaws.com:8501/",
     githubUrl: "https://github.com/imesh97/bankrpc",
-  },{
+  },
+  {
     title: "raphael - ai image editor",
     description:
       "A SaaS web app that transforms images using external AI models.",
@@ -181,7 +196,7 @@ export const EXPERIENCES: Experience[] = [
   {
     company: "SymptomStream",
     position: "Chief Technology Officer",
-    period: "July 2024 — Present",
+    period: "Nov. 2024 — Present",
     location: "Hamilton, CA",
     achievements: [
       "Led development of AI-powered prototype for optimizing hospital triage processes to enhance ER decision-making and operational efficiency.",
@@ -194,7 +209,7 @@ export const EXPERIENCES: Experience[] = [
   {
     company: "Rangara Creations",
     position: "Web Developer",
-    period: "June 2023 — May 2024",
+    period: "June 2023 — Jan. 2024",
     location: "Brampton, CA",
     achievements: [
       "Built commercial platform using Next.js, TypeScript, and Tailwind CSS, increasing user engagement by 200% and converting 10 new clients.",
@@ -402,12 +417,12 @@ export const SKILLS = [
   {
     name: "FastAPI",
     category: "Backend",
-    img: "/assets/icons/fastapi.png"
+    img: "/assets/icons/fastapi.png",
   },
   {
     name: "TensorFlow",
     category: "Backend",
-    img: "https://img.icons8.com/color/48/tensorflow.png"
+    img: "https://img.icons8.com/color/48/tensorflow.png",
   },
   {
     name: "WordPress",
